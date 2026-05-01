@@ -6,6 +6,10 @@
  padding: 0;
 }
 
+:root {
+ --percentage: 25%;
+}
+
 body {
  width: 100vw;
  height: 100vh;
@@ -46,12 +50,35 @@ main {
 }
 
 #sub-container label {
- background-color: hsla(225.56, 76.06%, 72.16%, 25%);
  padding: calc(1em - 2px);
  text-align: center;
  font-size: clamp(1rem, 2vw, 1.125rem);
  font-weight: 300;
  cursor: pointer;
+}
+
+#sub-container label:nth-child(1) {
+ background-color: hsla(4.62, 51.59%, 49.41%, var(--percentage));
+}
+
+#sub-container label:nth-child(2) {
+ background-color: hsla(242.76, 69.72%, 57.25%, var(--percentage));
+}
+
+#sub-container label:nth-child(3) {
+ background-color: hsla(284.25, 38.46%, 59.22%, var(--percentage));
+}
+
+#sub-container label:nth-child(4) {
+ background-color: hsla(344.26, 100%, 76.08%, var(--percentage));
+}
+
+#sub-container label:nth-child(5) {
+ background-color: hsla(73.93, 37.84%, 70.98%, var(--percentage));
+}
+
+#sub-container label:nth-child(6) {
+ background-color: hsla(225.56, 76.06%, 72.16%, var(--percentage));
 }
 
 #sub-container input[type="radio"] {
@@ -60,11 +87,11 @@ main {
 
 #sub-container label:has(input[type="radio"]:checked) {
  border-bottom: 3px solid black;
- background: hsla(225.56, 76.06%, 72.16%, 50%);
+ --percentage: 55%;
 }
 
 #sub-container label:has(input[type="radio"]:hover) {
- background: hsla(225.56, 76.06%, 72.16%, 50%);
+ --percentage: 45%;
 }
 
 #sub-container label:has(input[type="radio"]:active) {
