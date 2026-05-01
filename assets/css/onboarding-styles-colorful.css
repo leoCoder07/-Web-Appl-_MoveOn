@@ -46,10 +46,22 @@ main {
 #sub-container {
  display: flex;
  flex-direction: column;
- gap: 10px
+ gap: 20px
 }
 
-#sub-container label {
+#sub-container .header-q {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+#options-container {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+#options-container label {
  padding: calc(1em - 2px);
  text-align: center;
  font-size: clamp(1rem, 2vw, 1.125rem);
@@ -57,44 +69,78 @@ main {
  cursor: pointer;
 }
 
-#sub-container label:nth-child(1) {
+@keyframes slideIn {
+ from {
+  opacity: 0;
+  transform: translateX(50px);
+ }
+ to {
+  opacity: 1;
+  transform: translateX(0);
+ }
+}
+
+#options-container label:nth-child(1) {
  background-color: hsla(4.62, 51.59%, 49.41%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
 }
 
-#sub-container label:nth-child(2) {
+#options-container label:nth-child(2) {
  background-color: hsla(242.76, 69.72%, 57.25%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
+ animation-delay: 0.2s;
 }
 
-#sub-container label:nth-child(3) {
+#options-container label:nth-child(3) {
  background-color: hsla(284.25, 38.46%, 59.22%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
+ animation-delay: 0.4s;
 }
 
-#sub-container label:nth-child(4) {
+#options-container label:nth-child(4) {
  background-color: hsla(344.26, 100%, 76.08%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
+ animation-delay: 0.6s;
 }
 
-#sub-container label:nth-child(5) {
+#options-container label:nth-child(5) {
  background-color: hsla(73.93, 37.84%, 70.98%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
+ animation-delay: 0.8s;
 }
 
-#sub-container label:nth-child(6) {
+#options-container label:nth-child(6) {
  background-color: hsla(225.56, 76.06%, 72.16%, var(--percentage));
+
+ opacity: 0;
+ animation: slideIn 0.5s ease forwards;
+ animation-delay: 1s;
 }
 
-#sub-container input[type="radio"] {
+#options-container input[type="radio"] {
  appearance: none;
 }
 
-#sub-container label:has(input[type="radio"]:checked) {
+#options-container label:has(input[type="radio"]:checked) {
  border-bottom: 3px solid black;
  --percentage: 55%;
 }
 
-#sub-container label:has(input[type="radio"]:hover) {
+#options-container label:has(input[type="radio"]:hover) {
  --percentage: 45%;
 }
 
-#sub-container label:has(input[type="radio"]:active) {
+#options-container label:has(input[type="radio"]:active) {
  transform: scale(0.975);
 } 
 
