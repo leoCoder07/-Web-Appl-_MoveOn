@@ -141,14 +141,14 @@ main {
  font-weight: bolder;
 }
 
-#container button:hover {
+/* #container button:hover {
  transform: scale(1.025);
- /* background-color: hsla(225.56, 76.06%, 72.16%, 60%); */
-}
+ background-color: hsla(225.56, 76.06%, 72.16%, 60%);
+} */
 
 #container button:active {
+ transform: scale(0.950) !important;
  background-color: hsla(225.56, 76.06%, 72.16%, 45%);
- transform: scale(0.950);
 }
 
 @media (width <= 600px) {
