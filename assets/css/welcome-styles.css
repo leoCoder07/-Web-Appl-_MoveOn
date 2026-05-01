@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+:root {
+ /* colors for logo */
+ --logo-color-right: #829CEE;
+ --logo-color-left: #2AD1E2;
+
+ --secondary-color: #829cee;
+}
+
+body {
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 5em;
+ padding: 1rem;
+}
+
+main {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: "Lexend Deca", sans-serif;
+}
+
+#container {
+ display: flex;
+ flex-direction: column;
+ margin: 0 auto;
+ width: min(600px, 90%);
+ row-gap: 1em;
+}
+
+@keyframes slideDown {
+ from {
+  opacity: 0;
+  transform: translateY(-50px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+
+#container h2 {
+ font-weight: 500;
+ animation: slideDown 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+ from {
+  opacity: 0;
+  transform: translateY(50px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+
+#container .logo-box {
+ border: 1px solid hsla(225.56, 76.06%, 72.16%, 25%);
+ border-radius: 25px;
+ align-self: center;
+ height: auto;
+ padding: 0 1em;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
+ opacity: 0;
+ animation: slideUp 0.5s ease-out forwards;
+ animation-delay: 0.4s;
+}
+
+#container .logo {
+ font-family: "Momo Trust Display", sans-serif;
+ font-size: clamp(1rem, 10vw + 10px, 8rem);
+ text-align: center;
+
+ background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+
+ -webkit-background-clip: text;
+ background-clip: text;
+
+ color: transparent;
+}
+
+@keyframes slideFromRight {
+ from {
+  opacity: 0;
+  transform: translateX(50px);
+ }
+ to {
+  opacity: 1;
+  transform: translateX(0);
+ }
+}
+
+#container .text-right {
+ max-width: 70%;
+ text-align: right;
+ align-self: flex-end;
+ line-height: 1.50em;
+ opacity: 0;
+ animation: slideFromRight 0.5s ease-out forwards;
+ animation-delay: 1.5s;
+}
+
+#container button {
+ align-self: flex-end;
+ padding: 0.8em 3em;
+
+ border: none;
+ outline: none;
+
+ background-color: hsla(225.56, 76.06%, 72.16%, 25%);
+
+ border-radius: 15px;
+ border-bottom: 2px solid var(--secondary-color);
+
+ font-family: "Lexend Deca", sans-serif;
+ font-size: 14px;
+
+ cursor: pointer;
+ opacity: 0;
+ animation: slideUp 0.5s ease-out forwards;
+ animation-delay: 1.9s;
+}
+
+#container button::after {
+ content: "→";
+ margin-left: 5px;
+ font-weight: bolder;
+}
+
+#container button:hover {
+ transform: scale(1.025);
+ /* background-color: hsla(225.56, 76.06%, 72.16%, 60%); */
+}
+
+#container button:active {
+ background-color: hsla(225.56, 76.06%, 72.16%, 45%);
+ transform: scale(0.950);
+}
+
+@media (width <= 600px) {
+ #container .continue {
+  width: 100%;
+ }
+}
+
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+ }
+ to {
+  opacity: 1;
+ }
+}
+
+footer {
+ text-align: center;
+ font-family: "Lexend Deca", sans-serif;
+ opacity: 0;
+ animation: fadeIn 0.5s ease-out forwards;
+ animation-delay: 2.8s;
+}
+
+footer h4 {
+ font-size: clamp(0.825rem, 2vw, 1rem);
+ font-weight: 300;
+ color: #5d5d5d;
+}
