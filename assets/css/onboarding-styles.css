@@ -6,6 +6,10 @@
  padding: 0;
 }
 
+:root {
+ --percentage: 25%;
+}
+
 body {
  width: 100vw;
  min-height: 100vh;
@@ -30,7 +34,7 @@ main {
 }
 
 #main-container .header-1 {
- font-size: clamp(1rem, 5vw + 5px, 2.25rem);
+ font-size: clamp(1rem, 2vw + 5px, 1.85rem);
  font-weight: 400;
 }
 
@@ -135,6 +139,32 @@ main {
 #optionsContainer label:has(input[type="radio"]:active) {
  transform: scale(0.975);
 } 
+
+
+/* ! color emotions for 2nd question */
+#optionsContainer label.colorize:nth-child(1) {
+ background-color: hsla(4.62, 51.59%, 49.41%, var(--percentage));
+}
+
+#optionsContainer label.colorize:nth-child(2) {
+ background-color: hsla(242.76, 69.72%, 57.25%, var(--percentage));
+}
+
+#optionsContainer label.colorize:nth-child(3) {
+ background-color: hsla(284.25, 38.46%, 59.22%, var(--percentage));
+}
+
+#optionsContainer label.colorize:nth-child(4) {
+ background-color: hsla(344.26, 100%, 76.08%, var(--percentage));
+}
+
+#optionsContainer label.colorize:nth-child(5) {
+ background-color: hsla(73.93, 37.84%, 70.98%, var(--percentage));
+}
+
+#optionsContainer label.colorize:nth-child(6) {
+ background-color: hsla(225.56, 76.06%, 72.16%, var(--percentage));
+}
 
 #buttons-q-nav {
  display: flex;

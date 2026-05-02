@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ padding: 1rem;
+ width: 100vw;
+ min-height: 100vh;
+ font-family: "Lexend Deca", sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#auth-container {
+ width: min(600px, 90%);
+}
+
+/* #sign-up-form {
+ display: none;
+} */
+
+.auth-form {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.auth-form .header {
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ gap: 20px;
+}
+
+.auth-form .header h2 {
+ font-size: clamp(1rem, 5vw + 5px, 2rem);
+}
+
+.auth-form .header p {
+ font-size: clamp(1rem, 5vw + 5px, 1.75rem);
+ font-weight: 300;
+}
+
+.auth-form .input-box {
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+}
+
+.auth-form label {
+ display: block;
+ font-weight: 300;
+ font-size: 1.10rem;
+}
+
+.auth-form .input-box input {
+ width: 100%;
+ font-family: "Lexend Deca", sans-serif;
+ font-size: clamp(1rem, 2vw + 5px, 1.15rem);
+ padding: 0.7em;
+ margin-top: 5px;
+ border: 1px solid #829CEE;
+ outline: none;
+}
+
+.auth-form .input-box input:invalid {
+ border-bottom: 1px solid red;
+}
+
+.auth-form .input-box input:valid {
+ border: 1px solid #1bacbb;
+}
+
+.auth-form .username-code {
+ display: flex;
+ gap: 15px;
+}
+
+.auth-form .username-code > .username {
+ flex: 1 500px;
+}
+
+.auth-form .consent {
+ text-align: center;
+ font-size: clamp(0.75rem, 3vw, 1rem);
+ font-weight: 300;
+}
+
+.auth-form .quess-or-login {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 15px;
+}
+
+.auth-form .quess-or-login a {
+ font-size: clamp(1rem, 3vw + 2px ,1.2rem);
+ text-decoration: none;
+ color: #5553C6;
+}
+
+.auth-form .quess-or-login button {
+ background: none;
+ outline: none;
+ border: none;
+ color: #5553C6;
+
+ font-family: "Lexend Deca", sans-serif;
+
+ font-size: clamp(1rem, 3vw + 2px ,1.2rem);
+ cursor: pointer;
+}
+
+.auth-form button[name="signup"] {
+ font-family: "Lexend Deca", sans-serif;
+ font-size: 1.15rem;
+ padding: 0.7em;
+ border: none;
+
+ background: hsla(225.56, 76.06%, 72.16%, 50%);
+ cursor: pointer;
+}
+
+.auth-form button[name="signup"]:hover {
+ background: hsla(225.56, 76.06%, 72.16%, 35%);
+}
+
+.auth-form button[name="signup"]:active {
+ transform: scale(0.975);
+}
+
+.auth-form button[name="login"] {
+ font-family: "Lexend Deca", sans-serif;
+ font-size: 1.15rem;
+ padding: 0.7em;
+ border: none;
+
+ background: hsla(225.56, 76.06%, 72.16%, 50%);
+ cursor: pointer;
+}
+
+.auth-form button[name="login"]:hover {
+ background: hsla(225.56, 76.06%, 72.16%, 35%);
+}
+
+.auth-form button[name="login"]:active {
+ transform: scale(0.975);
+}
+
+.auth-form button[name="recover"] {
+ font-family: "Lexend Deca", sans-serif;
+ font-size: 1.15rem;
+ padding: 0.7em;
+ border: none;
+
+ background: hsla(225.56, 76.06%, 72.16%, 50%);
+ cursor: pointer;
+}
+
+.auth-form input[class="recover-input"]::placeholder {
+ font-weight: 300;
+ font-style: italic;
+}
+
+.auth-form button[name="recover"]:hover {
+ background: hsla(225.56, 76.06%, 72.16%, 35%);
+}
+
+.auth-form button[name="recover"]:active {
+ transform: scale(0.975);
+}
+
+#log-in-form {
+ display: none;
+}
+
+#forgot-pass-form {
+ display: none;
+}

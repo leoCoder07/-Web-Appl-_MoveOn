@@ -31,6 +31,7 @@ function loadQuestion(qId) {
 
 function updateUI(data) {
  document.getElementById('questionText').textContent = data.question;
+ document.title = `Onboarding | Question ${data.question_id}`
  // document.getElementById('questionNumber').textContent = `Question ${data.question_id} of ${totalQuestions}`;
 
  const optionsContainer = document.getElementById('optionsContainer');
@@ -39,13 +40,21 @@ function updateUI(data) {
  data.options.forEach((option, index) => {
   const radioId = `option_${option.id}`;
   const label = document.createElement('label');
+  label.className = 'label-box';
   label.htmlFor = `${radioId}`;
-  label.innerHTML = `${option.option_text}<input type="radio" name="answer" id="${radioId}" value="${option.option_text}" ${index === 0 ? 'checked' : ''}/>`;
+  label.innerHTML = `${option.option_text}<input type="radio" name="answer" id="${radioId}" value="${option.option_text}"/>`;
   optionsContainer.appendChild(label);
  });
 
  const backBtn = document.getElementById('backBtn');
  const nextBtn = document.getElementById('nextBtn');
+ const labels = document.querySelectorAll('.label-box');
+
+ if (data.question_id === 2) {
+  labels.forEach(label => {
+   label.classList.add('colorize');
+  });
+ }
 
  backBtn.style.display = data.question_id === 1 ? 'none' : 'inline-block';
  nextBtn.textContent = data.question_id === totalQuestions ? 'Log In' : 'Next →';
