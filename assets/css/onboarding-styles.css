@@ -8,6 +8,8 @@
 
 :root {
  --percentage: 25%;
+ --logo-color-right: #829CEE;
+ --logo-color-left: #2AD1E2;
 }
 
 body {
@@ -19,6 +21,44 @@ body {
  flex-direction: column;
  justify-content: center;
  align-items: center;
+}
+
+.logo-box {
+ border: 1px solid hsla(225.56, 76.06%, 72.16%, 25%);
+ border-radius: 25px;
+ align-self: center;
+ height: auto;
+ padding: 0 1em;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
+ 
+ position: absolute;
+ top: 2rem;
+ left: 2rem;
+}
+
+.logo {
+ font-family: "Momo Trust Display", sans-serif;
+ font-size: clamp(1rem, 5vw + 10px, 2rem);
+ text-align: center;
+
+ background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+
+ -webkit-background-clip: text;
+ background-clip: text;
+
+ color: transparent;
+}
+
+@media (height <= 700px) {
+ .logo-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  justify-self: flex-start;
+ }
+ body {
+  gap: 20px;
+ }
 }
 
 main {
@@ -34,7 +74,7 @@ main {
 }
 
 #main-container .header-1 {
- font-size: clamp(1rem, 2vw + 5px, 1.85rem);
+ font-size: clamp(1.25rem, 3vw + 5px, 1.85rem);
  font-weight: 400;
 }
 
@@ -180,4 +220,38 @@ main {
  cursor: pointer;
  outline: none;
  border: none;
+}
+
+footer {
+ text-align: right;
+ font-family: "Lexend Deca", sans-serif;
+ position: absolute;
+ bottom: 2rem;
+ right: 2rem;
+}
+
+footer h4 {
+ font-size: clamp(0.825rem, 2vw, 1rem);
+ font-weight: 300;
+ color: #5d5d5d;
+}
+
+footer a {
+ text-decoration: none;
+ color: #296071;
+}
+
+footer a:hover {
+ text-decoration: underline;
+ color: #4f8393;
+}
+
+@media (height < 750px) {
+ footer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  justify-self: flex-end;
+  text-align: center;
+ }
 }

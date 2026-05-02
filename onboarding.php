@@ -10,6 +10,10 @@
 
 <body>
 
+ <div class="logo-box">
+  <h1 class="logo">MoveOn</h1>
+ </div>
+
  <main>
   <div id="main-container">
    <form id="onboarding-form" method="POST" action="">
@@ -32,6 +36,11 @@
    </form>
   </div>
  </main>
+
+ <footer>
+  <h4>Copyright &copy; 2026 All Rights Reserved</h4>
+  <h4>Made with &#x2764; by <a href="#container" target="_blank">@johnleojariel</a></h4>
+ </footer>
 
  <script src="./assets/js/onboarding.js"></script>
 

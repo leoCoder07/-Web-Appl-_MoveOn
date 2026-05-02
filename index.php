@@ -17,7 +17,7 @@
     <h1 class="logo">MoveOn</h1>
    </div>
    <p class="text-right">A place where you can vent, relapse, read inspiring stories and track your healing progress.</p>
-   <button class="continue">Continue </button>
+   <button class="continue" onclick="window.location.href='onboarding.php'">Continue </button>
   </div>
  </main>
 

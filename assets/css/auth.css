@@ -6,23 +6,72 @@
  padding: 0;
 }
 
+:root {
+ --percentage: 25%;
+ --logo-color-right: #829CEE;
+ --logo-color-left: #2AD1E2;
+}
+
 body {
  padding: 1rem;
  width: 100vw;
  min-height: 100vh;
  font-family: "Lexend Deca", sans-serif;
  display: flex;
+ flex-direction: column;
  justify-content: center;
  align-items: center;
+}
+
+.logo-box {
+ border: 1px solid hsla(225.56, 76.06%, 72.16%, 25%);
+ border-radius: 25px;
+ align-self: center;
+ height: auto;
+ padding: 0 1em;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
+ 
+ position: absolute;
+ top: 2rem;
+ left: 2rem;
+}
+
+.logo {
+ font-family: "Momo Trust Display", sans-serif;
+ font-size: clamp(1rem, 5vw + 10px, 2rem);
+ text-align: center;
+
+ background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+
+ -webkit-background-clip: text;
+ background-clip: text;
+
+ color: transparent;
+}
+
+@media (height <= 700px) {
+ .logo-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  justify-self: flex-start;
+ }
+ body {
+  gap: 50px;
+ }
 }
 
 #auth-container {
  width: min(600px, 90%);
 }
 
-/* #sign-up-form {
+:is(#sign-up-form, #log-in-form, #forgot-pass-form) {
  display: none;
-} */
+}
+
+:is(#sign-up-form, #log-in-form, #forgot-pass-form).active {
+ display: flex;
+}
 
 .auth-form {
  display: flex;
@@ -38,11 +87,12 @@ body {
 }
 
 .auth-form .header h2 {
- font-size: clamp(1rem, 5vw + 5px, 2rem);
+ font-size: clamp(1rem, 3vw + 16px, 2rem);
+ font-weight: 500;
 }
 
 .auth-form .header p {
- font-size: clamp(1rem, 5vw + 5px, 1.75rem);
+ font-size: clamp(1rem, 3vw + 8px, 1.75rem);
  font-weight: 300;
 }
 
@@ -116,7 +166,11 @@ body {
  cursor: pointer;
 }
 
-.auth-form button[name="signup"] {
+.auth-form .quess-or-login button:active {
+ transform: scale(0.950);
+}
+
+.auth-form button:is([name="signup"], [name="login"], [name="recover"]) {
  font-family: "Lexend Deca", sans-serif;
  font-size: 1.15rem;
  padding: 0.7em;
@@ -126,40 +180,12 @@ body {
  cursor: pointer;
 }
 
-.auth-form button[name="signup"]:hover {
+.auth-form button:is([name="signup"], [name="login"], [name="recover"]):hover {
  background: hsla(225.56, 76.06%, 72.16%, 35%);
 }
 
-.auth-form button[name="signup"]:active {
+.auth-form button:is([name="signup"], [name="login"], [name="recover"]):active {
  transform: scale(0.975);
-}
-
-.auth-form button[name="login"] {
- font-family: "Lexend Deca", sans-serif;
- font-size: 1.15rem;
- padding: 0.7em;
- border: none;
-
- background: hsla(225.56, 76.06%, 72.16%, 50%);
- cursor: pointer;
-}
-
-.auth-form button[name="login"]:hover {
- background: hsla(225.56, 76.06%, 72.16%, 35%);
-}
-
-.auth-form button[name="login"]:active {
- transform: scale(0.975);
-}
-
-.auth-form button[name="recover"] {
- font-family: "Lexend Deca", sans-serif;
- font-size: 1.15rem;
- padding: 0.7em;
- border: none;
-
- background: hsla(225.56, 76.06%, 72.16%, 50%);
- cursor: pointer;
 }
 
 .auth-form input[class="recover-input"]::placeholder {
@@ -167,18 +193,36 @@ body {
  font-style: italic;
 }
 
-.auth-form button[name="recover"]:hover {
- background: hsla(225.56, 76.06%, 72.16%, 35%);
+footer {
+ text-align: right;
+ font-family: "Lexend Deca", sans-serif;
+ position: absolute;
+ bottom: 2rem;
+ right: 2rem;
 }
 
-.auth-form button[name="recover"]:active {
- transform: scale(0.975);
+footer h4 {
+ font-size: clamp(0.825rem, 2vw, 1rem);
+ font-weight: 300;
+ color: #5d5d5d;
 }
 
-#log-in-form {
- display: none;
+footer a {
+ text-decoration: none;
+ color: #296071;
 }
 
-#forgot-pass-form {
- display: none;
+footer a:hover {
+ text-decoration: underline;
+ color: #4f8393;
+}
+
+@media (height < 750px) {
+ footer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  justify-self: flex-end;
+  text-align: center;
+ }
 }

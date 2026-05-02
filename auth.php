@@ -10,16 +10,20 @@
 
 <body>
 
+ <div class="logo-box">
+  <h1 class="logo">MoveOn</h1>
+ </div>
+
  <main id="auth-container">
 
   <!-- sign up form -->
-  <div id="sign-up-form" class="auth-form">
+  <div id="sign-up-form" class="auth-form active">
    <div class="header">
     <h2>Sign Up</h2>
     <p>Create your first account</p>
    </div>
 
-   <form method="POST" action="">
+   <form method="POST" action="" autocomplete="off">
     <div class="input-box">
      <div class="username-code">
       <div class="username">
@@ -61,7 +65,7 @@
     <p>Input existing account</p>
    </div>
 
-   <form method="POST" action="">
+   <form method="POST" action="" autocomplete="off">
     <div class="input-box">
      <div class="username-code">
       <div class="username">
@@ -78,7 +82,7 @@
      <p class="consent">By logging in, you consent to MoveOn's Terms of Use and Privacy Policy.</p>
 
      <div class="quess-or-login">
-      <button type="button" class="forgot-btn">Forgot password?</button>
+      <button type="button" class="forgot-pass-btn">Forgot password?</button>
       <button type="button" class="toggle-signup-btn">Sign up</button>
      </div>
 
@@ -116,6 +120,13 @@
   </div>
 
  </main>
+
+ <footer>
+  <h4>Copyright &copy; 2026 All Rights Reserved</h4>
+  <h4>Made with &#x2764; by <a href="#container" target="_blank">@johnleojariel</a></h4>
+ </footer>
+
+ <script src="./assets/js/auth.js"></script>
 
 </body>
 

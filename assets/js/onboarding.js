@@ -57,7 +57,7 @@ function updateUI(data) {
  }
 
  backBtn.style.display = data.question_id === 1 ? 'none' : 'inline-block';
- nextBtn.textContent = data.question_id === totalQuestions ? 'Log In' : 'Next →';
+ nextBtn.textContent = data.question_id === totalQuestions ? 'Sign up' : 'Next →';
 }
 
 
