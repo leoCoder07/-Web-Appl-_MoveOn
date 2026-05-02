@@ -4,12 +4,12 @@
 </div>
 
 <div id="options-container">
- <label for="question-1">Overwhelmed and heavy<input type="radio" id="question-1" name="oboarding-q" value="1" required/></label>
- <label for="question-2">Empty or numb<input type="radio" id="question-2" name="oboarding-q" value="2" required/></label>
- <label for="question-3">Restless and anxious<input type="radio" id="question-3" name="oboarding-q" value="3" required/></label>
- <label for="question-4">Angry or resentful<input type="radio" id="question-4" name="oboarding-q" value="4" required/></label>
- <label for="question-5">Starting to feel hopeful<input type="radio" id="question-5" name="oboarding-q" value="5" required/></label>
- <label for="question-6">I'm not sure yet<input type="radio" id="question-6" name="oboarding-q" value="6" required/></label>
+ <label for="question-1">Overwhelmed and heavy<input type="radio" id="question-1" name="q2" value="1" required/></label>
+ <label for="question-2">Empty or numb<input type="radio" id="question-2" name="q2" value="2" required/></label>
+ <label for="question-3">Restless and anxious<input type="radio" id="question-3" name="q2" value="3" required/></label>
+ <label for="question-4">Angry or resentful<input type="radio" id="question-4" name="q2" value="4" required/></label>
+ <label for="question-5">Starting to feel hopeful<input type="radio" id="question-5" name="q2" value="5" required/></label>
+ <label for="question-6">I'm not sure yet<input type="radio" id="question-6" name="q2" value="6" required/></label>
 
  <div id="buttons-q-nav">
   <button class="previous-btn">&#8592; Back</button>

@@ -5,20 +5,35 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="./assets/css/onboarding-styles.css">
- <title>Onboarding | Question <?= 1 ?></title>
+ <title>Onboarding | Questions </title>
 </head>
 
 <body>
 
  <main>
   <div id="main-container">
-   <form action="">
+   <form id="onboarding-form" method="POST" action="">
     <div id="sub-container">
-     <?php include './includes/onboard-q/question-4.php'; ?>
+     <div class="header-q">
+      <h1 class="header-1">Hi! You are exactly where you are. It's not a mistake.</h1>
+      <h2 id="questionText" class="header-2"></h2>
+     </div>
+
+     <div id="options-container">
+      <div id="optionsContainer"></div>
+
+      <div id="buttons-q-nav">
+       <button type="button" id="backBtn">← Back</button>
+       <button type="button" id="skipBtn">Skip</button>
+       <button type="button" id="nextBtn">Next →</button>
+      </div>
+     </div>
     </div>
    </form>
   </div>
  </main>
+
+ <script src="./assets/js/onboarding.js"></script>
 
 </body>
 
