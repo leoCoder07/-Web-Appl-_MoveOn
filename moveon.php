@@ -39,8 +39,15 @@ require_once 'process-post-authentication.php';
     </ul>
    </div>
 
-   <div id="profile">
+   <div id="profile" class="dropdown-profile">
     <div class="profile-circle"></div>
+    <div class="dropdown-list">
+     <a id="view-profile-btn" href="#">View Profile <i class="ti ti-user"></i></a>
+     <button type="button" class="setting-btn">Settings <i class="ti ti-settings"></i></button>
+     <form method="POST" action="">
+      <button type="submit" name="logout">Log Out <i class="ti ti-logout"></i></button>
+     </form>
+    </div>
    </div>
 
    <div id="burger-btn">
