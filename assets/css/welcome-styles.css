@@ -4,6 +4,7 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
+ -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -78,6 +79,22 @@ main {
  opacity: 0;
  animation: slideUp 0.5s ease-out forwards;
  animation-delay: 0.4s;
+ cursor: default;
+}
+
+@property --gradient-angle {
+ syntax: "<angle>";
+ initial-value: 90deg;
+ inherits: false;
+}
+
+@keyframes rotate-gradient {
+ from {
+  --gradient-angle: 90deg;
+ }
+ to {
+  --gradient-angle: 360deg;
+ }
 }
 
 #container .logo {
@@ -85,7 +102,9 @@ main {
  font-size: clamp(1rem, 10vw + 10px, 8rem);
  text-align: center;
 
- background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+ background: linear-gradient(var(--gradient-angle), var(--logo-color-left), var(--logo-color-right) 50%);
+
+ animation: rotate-gradient 0.5s ease-in-out infinite;
 
  -webkit-background-clip: text;
  background-clip: text;

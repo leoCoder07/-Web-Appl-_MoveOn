@@ -141,3 +141,9 @@ function skipQuestion() {
   loadQuestion(currentQuestion);
  }
 }
+
+
+
+document.querySelector('.logo-box').addEventListener('click', () => {
+ window.location.href = 'index.php';
+});

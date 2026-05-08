@@ -4,6 +4,7 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
+ -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -20,6 +21,7 @@ body {
  display: flex;
  flex-direction: column;
  justify-content: center;
+ gap: 20px;
  align-items: center;
 }
 
@@ -27,21 +29,38 @@ body {
  border: 1px solid hsla(225.56, 76.06%, 72.16%, 25%);
  border-radius: 25px;
  align-self: center;
+ justify-self: flex-start;
  height: auto;
  padding: 0 1em;
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  
- position: absolute;
- top: 2rem;
- left: 2rem;
+ 
+ cursor: default;
 }
+
+@property --gradient-angle {
+ syntax: "<angle>";
+ initial-value: 90deg;
+ inherits: false;
+}
+
+@keyframes rotate-gradient {
+ from {
+  --gradient-angle: 0deg;
+ }
+ to {
+  --gradient-angle: 360deg;
+ }
+}
+
 
 .logo {
  font-family: "Momo Trust Display", sans-serif;
  font-size: clamp(1rem, 5vw + 10px, 2rem);
  text-align: center;
 
- background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+ background: linear-gradient(var(--gradient-angle), var(--logo-color-left), var(--logo-color-right) 50%);
+ animation: rotate-gradient 0.5s infinite;
 
  -webkit-background-clip: text;
  background-clip: text;
@@ -49,7 +68,7 @@ body {
  color: transparent;
 }
 
-@media (height <= 700px) {
+/* @media (height <= 800px) {
  .logo-box {
   position: relative;
   top: 0;
@@ -59,7 +78,7 @@ body {
  body {
   gap: 20px;
  }
-}
+} */
 
 main {
  width: 100%;
@@ -223,11 +242,9 @@ main {
 }
 
 footer {
- text-align: right;
+ text-align: center;
  font-family: "Lexend Deca", sans-serif;
- position: absolute;
- bottom: 2rem;
- right: 2rem;
+ justify-self: flex-end;
 }
 
 footer h4 {
@@ -246,7 +263,7 @@ footer a:hover {
  color: #4f8393;
 }
 
-@media (height < 750px) {
+/* @media (height < 50vh) {
  footer {
   position: relative;
   bottom: 0;
@@ -254,4 +271,4 @@ footer a:hover {
   justify-self: flex-end;
   text-align: center;
  }
-}
+} */

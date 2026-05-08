@@ -4,6 +4,7 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
+ -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -21,19 +22,34 @@ body {
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ gap: 25px;
 }
 
 .logo-box {
  border: 1px solid hsla(225.56, 76.06%, 72.16%, 25%);
  border-radius: 25px;
  align-self: center;
+ justify-self: flex-start;
  height: auto;
  padding: 0 1em;
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  
- position: absolute;
- top: 2rem;
- left: 2rem;
+ cursor: default;
+}
+
+@property --gradient-angle {
+ syntax: "<angle>";
+ initial-value: 90deg;
+ inherits: false;
+}   
+
+@keyframes rotate-gradient {
+ from {
+  --gradient-angle: 0deg;
+ }
+ to {
+  --gradient-angle: 360deg;
+ }
 }
 
 .logo {
@@ -41,15 +57,17 @@ body {
  font-size: clamp(1rem, 5vw + 10px, 2rem);
  text-align: center;
 
- background: linear-gradient(to right, var(--logo-color-left), var(--logo-color-right) 50%);
+ background: linear-gradient(var(--gradient-angle), var(--logo-color-left), var(--logo-color-right) 50%);
+ animation: rotate-gradient 0.5s infinite;
 
  -webkit-background-clip: text;
  background-clip: text;
 
  color: transparent;
+ transition: --gradient-angle 1s ease;
 }
 
-@media (height <= 700px) {
+/* @media (height <= 800px) {
  .logo-box {
   position: relative;
   top: 0;
@@ -59,7 +77,7 @@ body {
  body {
   gap: 50px;
  }
-}
+} */
 
 #auth-container {
  width: min(600px, 90%);
@@ -82,6 +100,7 @@ body {
 .auth-form .header {
  display: flex;
  flex-direction: column;
+ align-items: center;
  text-align: center;
  gap: 20px;
 }
@@ -94,6 +113,23 @@ body {
 .auth-form .header p {
  font-size: clamp(1rem, 3vw + 8px, 1.75rem);
  font-weight: 300;
+}
+
+.auth-form .header p:nth-of-type(2) {
+ padding: 0.50em;
+ width: 100%;
+ font-size: clamp(0.25rem, 3vw, 1.050rem);
+ color: #590d22;
+ background-color: #ffccd5;
+ border-left: 5px solid #590d22;
+ text-align: left;
+ /* letter-spacing: 1px; */
+}
+
+.auth-form .header #success-message {
+ background-color: #bee9e85d;
+ color: #1b4965;
+ border-color: #1b4965;
 }
 
 .auth-form .input-box {
@@ -122,9 +158,9 @@ body {
  border-bottom: 1px solid red;
 }
 
-.auth-form .input-box input:valid {
+/* .auth-form .input-box input:valid {
  border: 1px solid #1bacbb;
-}
+} */
 
 .auth-form .username-code {
  display: flex;
@@ -170,7 +206,7 @@ body {
  transform: scale(0.950);
 }
 
-.auth-form button:is([name="signup"], [name="login"], [name="recover"]) {
+.auth-form button:is([name="signup"], [name="login"], [name="recover_password"]) {
  font-family: "Lexend Deca", sans-serif;
  font-size: 1.15rem;
  padding: 0.7em;
@@ -194,11 +230,9 @@ body {
 }
 
 footer {
- text-align: right;
+ text-align: center;
  font-family: "Lexend Deca", sans-serif;
- position: absolute;
- bottom: 2rem;
- right: 2rem;
+ justify-self: flex-end;
 }
 
 footer h4 {
@@ -217,7 +251,7 @@ footer a:hover {
  color: #4f8393;
 }
 
-@media (height < 750px) {
+/* @media (height < 800px) {
  footer {
   position: relative;
   bottom: 0;
@@ -225,4 +259,4 @@ footer a:hover {
   justify-self: flex-end;
   text-align: center;
  }
-}
+} */

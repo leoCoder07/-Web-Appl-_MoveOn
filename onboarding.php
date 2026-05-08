@@ -1,3 +1,15 @@
+
+<?php 
+
+ require_once 'process-authentication.php';
+
+ if (isset($_SESSION['user_id']) || isset($_SESSION['guest_answers'])) {
+  header('Location: moveon.php');
+  exit;
+ }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
