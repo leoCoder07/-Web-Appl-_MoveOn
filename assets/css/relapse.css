@@ -37,7 +37,7 @@ body {
  width: 650px;
  min-height: 750px;
  height: auto;
- padding: 2em;
+ padding: 2em 0;
  margin: 0 auto;
 }
 
@@ -117,6 +117,8 @@ body {
  color: #9CDCFC;
 }
 
+
+
 /* ! sidebar */
 
 #app-container .sidebar {
@@ -174,6 +176,101 @@ body {
  margin-left: 1em;
  font-weight: 300;
 }
+
+.sidebar .music-image {
+ flex: 1;
+ min-height: 100px;
+ background-image: url("https://i.pinimg.com/736x/15/7b/01/157b01fdb897a98fb36cbdb6546b9272.jpg");
+ background-size: cover;
+ background-position: center;
+ border-radius: 15px;
+
+ position: relative;
+ overflow: hidden;
+}
+
+.music-image .title-container {
+ position: absolute;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.397);
+ color: white;
+ /* height: 65%; */
+ width: 100%;
+ padding: 0.5em 1em;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+}
+
+.sidebar .music-player {
+ /* flex: 1; */
+ background: #E9ECEF;
+ border: 1px solid #0C535A;
+ box-shadow: 0 5px 5px rgba(128, 128, 128, 0.5);
+ border-radius: 15px;
+ padding: 1em;
+}
+
+.music-player .music-controller {
+ background: white;
+ border-radius: 13px;
+
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ align-items: center;
+ padding: 0.5em;
+ gap: 25px;
+}
+
+.music-controller .music-element {
+ display: flex;
+ height: 100%;
+ flex: 1;
+ align-items: center;
+}
+
+.music-controller .music-element:nth-child(1) {
+ /* background: gray; */
+ justify-content: space-between;
+ flex: 2;
+ gap: 15px;
+}
+
+.music-controller .music-element:nth-child(1) input {
+ flex: 1;
+ cursor: pointer;
+}
+
+.music-controller .music-element:nth-child(2) {
+ /* background: gray; */
+ justify-content: space-between;
+ gap: 25px;
+}
+
+.controls .play-btn {
+ font-size: 2.2rem;
+ height: 100%;
+ width: 60px;
+
+ border: none;
+ outline: none;
+
+ border-radius: 11px;
+ background-color: #8AE6F0;
+}
+
+.controls button {
+ cursor: pointer;
+}
+
+.controls button:nth-child(-n + 2) {
+ font-size: 2rem;
+ background: none;
+ border: none;
+}
+
 
 @media (width <= 1444px) {
  #app-container .sidebar {

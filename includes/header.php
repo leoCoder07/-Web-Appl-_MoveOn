@@ -13,7 +13,7 @@
      
      <li><a href="relapse.php" class="nav-btn"><i class="ti ti-music-heart"></i> RELAPSE</a></li>
      
-     <li><a href="" class="nav-btn"><i class="ti ti-clover"></i> HOPE</a></li>
+     <li><a href="hope.php" class="nav-btn"><i class="ti ti-clover"></i> HOPE</a></li>
 
      <li><a href="" class="nav-btn"><i class="ti ti-brand-google-fit"></i> TRACK</a></li>
     </ul>

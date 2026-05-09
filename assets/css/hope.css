@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+:root {
+ --percentage: 25%;
+ --logo-color-right: #829CEE;
+ --logo-color-left: #2AD1E2;
+}
+
+body {
+ font-family: "Lexend Deca", sans-serif;
+ min-height: 100vh;
+}
+
+#header-nav li:nth-of-type(3) a {
+ background: linear-gradient(to right, #2ad0e27b, #829CEE7b 25%);
+ border: none;
+ border-bottom: 2px solid black;
+ color: black;
+}
+
+#app-container {
+ width: min(90%, 1400px);
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin: 0 auto;
+}
+
+#app-container .quote-section {
+ width: 650px;
+ min-height: 700px;
+ height: auto;
+ padding: 2em 0;
+ margin: 0 auto;
+}
+
+#app-container .quote-container {
+ width: 100%;
+ height: 100%;
+ border: 2px solid #625FE9;
+ border-radius: 15px;
+
+ background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../images/webp/img4.webp");
+ background-size: cover;
+ background-position: center;
+
+ position: relative;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 2em;
+ gap: 3.5em;
+}
+
+.quote-container blockquote {
+ font-size: clamp(1rem, 5vw + 2px, 2.3rem);
+ font-weight: 300;
+ text-align: center;
+ margin: 0 clamp(0.5rem, 3vw, 1.5em);
+ color: white;
+}
+
+.quote-container cite {
+ font-size: clamp(1rem, 3vw + 10px, 2rem);
+ font-style: normal;
+ color: white;
+}
+
+#app-container .sidebar {
+ width: 650px;
+ padding: clamp(0.2em, 3vw, 2em);
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ /* background: lightblue; */
+ min-height: 100%;
+}
+
+.sidebar header {
+ line-height: clamp(1.5em, 5vw, 2.5em);
+}
+
+.sidebar header > h1 {
+ font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.sidebar header > p {
+ font-size: clamp(1.2rem, 3vw, 2rem);
+ font-weight: 300;
+}
+
+.sidebar .info-input {
+ display: flex;
+ flex-direction: column;
+ /* background-color: red; */
+ flex: 1;
+ gap: 15px;
+}
+
+.sidebar :is(.card-tutorial, .card-research) {
+ flex: 1;
+}
+
+.sidebar .card-tutorial {
+ background: hsla(350, 75.82%, 64.31%, 20%);
+ padding: 1em;
+ border-left: 5px solid #E95F76;
+}
+
+.sidebar .card-research {
+ background: hsla(225.56, 76.06%, 72.16%, 20%);
+ padding: 1em;
+ font-size: clamp(0.6rem, 2vw + 2px, 1rem);
+ font-weight: 300;
+}
+
+.sidebar :is(.card-tutorial h2, .card-research h2) {
+ font-size: clamp(1.1rem, 3vw, 1.5rem);
+ font-weight: 300;
+ margin-bottom: 0.3em;
+}
+
+.sidebar .card-tutorial ul {
+ font-size: clamp(0.6rem, 2vw + 2px, 1rem);
+ margin-left: 1em;
+ font-weight: 300;
+}
+
+@media (width <= 1444px) {
+ #app-container .sidebar {
+  width: 100%;
+ }
+ .sidebar .info-input {
+  flex-direction: column-reverse;
+ }
+ .sidebar .input-area {
+  flex: 1 300px;
+ }
+}
+
+/* ! heartbreak stories styles */
+
+#heartbreak-stories {
+ max-width: 1400px;
+ width: 100%;
+ margin: 2.5rem auto;
+ padding: 1em;
+}
+
+#heartbreak-stories h2 {
+ font-size: clamp(0.7rem, 3vw, 1.5rem);
+ font-weight: 400;
+ text-align: left;
+ color: #5D5D5D;
+}
+
+.divider {
+ border-top: 2px solid #5D5D5D;
+ padding: 10px;
+}
+
+#heartbreak-stories .img-slider-btns {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 10px;
+ padding: 5px 10px;
+ width: 100%;
+}
+
+.img-slider-btns button {
+ font-size: clamp(1.5rem, 3vw, 2rem);
+ padding: 0 1em;
+ background: #8AE6F0;
+ border-radius: 10px;
+ border: none;
+ outline: none;
+ cursor: pointer;
+}
+
+
+#heartbreak-stories .slider-container {
+ width: 100%;
+ overflow: hidden;
+ position: relative;
+}
+
+.slider-container .slider-track {
+ display: flex;
+ transition: transform 0.5s ease-in-out;
+}
+
+.slider-container .slide {
+ flex: 0 0 33.33%;
+ padding: 10px;
+}
+
+.slide img {
+ width: 100%;
+ border-top: 5px solid #6C63FF;
+}
+
+@media (max-width: 985px) {
+ .slider-container .slide {
+  flex: 0 0 100%;
+ }
+}
+
+/* ! books section styles */
+
+#books-section {
+ max-width: 1400px;
+ width: 100%;
+ margin: 2.5rem auto;
+ padding: 1em;
+}
+
+#books-section h2 {
+ font-size: clamp(0.7rem, 3vw, 1.5rem);
+ font-weight: 400;
+ text-align: left;
+ color: #5D5D5D;
+}
+
+#books-section .accordion {
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+ width: 100%;
+ padding: clamp(0.5em, 2vw, 2em) 10px;
+}
+
+.accordion .accordion-item {
+ width: inherit;
+}
+
+.accordion-item .accordion-header {
+ display: flex;
+ align-items: center;
+ width: inherit;
+ text-align: left;
+ padding: 1em;
+ font-size: clamp(0.5rem, 2vw + 2px, 1.25rem);
+ font-family: "Lexend Deca", sans-serif;
+
+ background: hsla(185.54, 76.03%, 52.55%, 35%);
+ border: none;
+ outline: none;
+
+ border-bottom: 2px solid;
+ position: relative;
+ gap: 1em;
+}
+
+.accordion-header a {
+ flex: 1;
+ height: 100%;
+ cursor: pointer;
+ color: black;
+ text-decoration: none;
+}
+
+#chevron-btn {
+ font-size: clamp(1rem, 2vw, 2rem);
+ font-weight: bolder;
+ cursor: pointer;
+ transition: transform 0.1s ease;
+}
+
+.accordion-item.active #chevron-btn {
+ transform: rotate(180deg);
+}
+
+.accordion-header .title {
+ font-weight: 600;
+}
+
+.accordion-item .accordion-href:hover .title  {
+ text-decoration: underline;
+}
+
+.accordion-item .accordion-content {
+ background-color: hsla(225.56, 76.06%, 72.16%, 25%);
+ padding: 1em;
+ font-size: clamp(0.5rem, 2vw + 3px, 1.2rem);
+ font-weight: 300;
+ display: none;
+}
+
+.accordion-content p {
+ line-height: 1.7em;
+ text-align: justify;
+}
+
+.accordion-item.active .accordion-content {
+ display: block;
+}
+
+/* ! other section style */
+
+#others-section {
+ max-width: 1400px;
+ width: 100%;
+ margin: 2.5rem auto;
+ padding: 1em;
+}
+
+#others-section h2 {
+ font-size: clamp(0.7rem, 3vw, 1.5rem);
+ font-weight: 400;
+ text-align: left;
+ color: #5D5D5D;
+}
+
+#others-section .accordion {
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+ width: 100%;
+ padding: clamp(0.5em, 2vw, 2em) 10px;
+}
+
+#others-section .accordion-header {
+ background: hsla(28.94, 100%, 50%, 35%);
+}

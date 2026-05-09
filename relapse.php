@@ -40,29 +40,60 @@
      <p>Listen to music</p>
     </header>
 
-    <section class="card-tutorial">
-     <h2><i class="ti ti-alert-circle"></i> Quick Tutorial</h2>
-     <ul class="tutorial-list">
-      <li>Use the writing bar at the bottom left-corner.</li>
-      <li>Write what you feel and think, do not overthink it.</li>
-      <li>Click the “Put” Button to put it inside the digital jar.</li>
-      <li>If you want to release it, you can click the “Burn” Button.</li>
-     </ul>
-    </section>
+    <section class="info-input">
+     <section class="card-tutorial">
+      <h2><i class="ti ti-alert-circle"></i> Quick Tutorial</h2>
+      <ul class="tutorial-list">
+       <li>Use the writing bar at the bottom left-corner.</li>
+       <li>Write what you feel and think, do not overthink it.</li>
+       <li>Click the “Put” Button to put it inside the digital jar.</li>
+       <li>If you want to release it, you can click the “Burn” Button.</li>
+      </ul>
+     </section>
 
-    <section class="card-research">
+     <section class="card-research">
       <h2><i class="ti ti-file-search"></i> Research</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  vehicula interdum enim sed mollis. Praesent nec est in risus ullamcorper tristique. Sed vel condimentum leo, a vestibulum odio. Suspendisse  mattis porta mi. Integer tempus quis metus sit amet volutpat. Duis  interdum turpis id nisl condimentum, non pellentesque libero iaculis.  Donec feugiat consectetur lacus nec imperdiet. Nulla id malesuada sem.</p>
      </section>
 
-     <div class="music-image"></div>
-     <div class="music-controller"></div>
+     <div class="music-image">
+      <div class="title-container">
+       <p>Music Playing:</p>
+       <h3>The Man Who Can't Be Moved</h3>
+      </div>
+     </div>
+
+     <div class="music-player">
+      <div class="music-controller">
+       <div class="music-progress music-element">
+        <span class="current-time">0:00</span>
+        <input type="range" class="progress-bar" min="0" max="100" value="0" step="1">
+        <span class="duration">3:45</span>
+       </div>
+
+       <div class="controls music-element">
+        <button class="prev-btn" title="Previous song">
+         <i class="ti ti-player-track-prev"></i>
+        </button>
+
+        <button class="next-btn" title="Next song">
+         <i class="ti ti-player-track-next"></i>
+        </button>
+
+        <button class="play-btn" title="Play/Pause">
+         <i class="ti ti-player-play"></i>
+         <!-- <i class="ti ti-player-pause"></i> -->
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
    </aside>
 
   </section>
  </main>
 
-
+ <?php include './includes/footer.php' ?>
 
 </body>
 
