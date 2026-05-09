@@ -1,7 +1,7 @@
 <header id="header-nav">
   <nav>
    <div id="logo-container">
-    <div class="logo-box">
+    <div class="logo-box logo-href">
      <h1 class="logo">MoveOn</h1>
     </div>
    </div>

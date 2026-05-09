@@ -105,6 +105,7 @@ require_once 'process-post-authentication.php';
  <!-- footer -->
  <?php include './includes/footer.php'; ?>
 
+ <script src="assets/js/header.js"></script>
  <script src="assets/js/moveon.js"></script>
 
 </body>

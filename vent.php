@@ -1,6 +1,7 @@
 <?php 
 
-require_once '';
+require_once 'process-authentication.php';
+require_once 'process-post-authentication.php'; 
 
 ?>
 
@@ -62,7 +63,10 @@ require_once '';
   </section>
  </main>
 
- <?php // ! include './includes/footer.php' ?>
+ <?php include './includes/footer.php' ?>
+
+ <script src="assets/js/header.js"></script>
+ 
 
 </body>
 
