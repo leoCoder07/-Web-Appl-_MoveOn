@@ -11,7 +11,7 @@
 
      <li><a href="vent.php" class="nav-btn"><i class="ti ti-volcano"></i> VENT</a></li>
      
-     <li><a href="" class="nav-btn"><i class="ti ti-music-heart"></i> RELAPSE</a></li>
+     <li><a href="relapse.php" class="nav-btn"><i class="ti ti-music-heart"></i> RELAPSE</a></li>
      
      <li><a href="" class="nav-btn"><i class="ti ti-clover"></i> HOPE</a></li>
 
