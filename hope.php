@@ -8,11 +8,11 @@
  <link rel="stylesheet" href="assets/css/hope.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
- <title>Hope</title>
+ <title>Hope - Gain Perspective</title>
 </head>
 
 <body>
- 
+
  <?php include './includes/header.php' ?>
 
  <main>
@@ -20,12 +20,10 @@
 
    <div class="quote-section">
     <div class="quote-container">
-     <blockquote>
-      Design is not just what it looks like and feels like. Design is how it works.
+     <blockquote id="dailyQuote">
+      Loading...
      </blockquote>
-     <cite>
-      Steve Jobs
-     </cite>
+     <cite id="quoteAuthor">-</cite>
     </div>
    </div>
 
@@ -39,16 +37,16 @@
      <section class="card-tutorial">
       <h2><i class="ti ti-alert-circle"></i> Quick Tutorial</h2>
       <ul class="tutorial-list">
-       <li>Use the writing bar at the bottom left-corner.</li>
-       <li>Write what you feel and think, do not overthink it.</li>
-       <li>Click the “Put” Button to put it inside the digital jar.</li>
-       <li>If you want to release it, you can click the “Burn” Button.</li>
+       <li>Read daily inspirational quotes to start your healing journey.</li>
+       <li>Explore heartbreak stories from famous people who overcame adversity.</li>
+       <li>Discover recommended books for healing and personal growth.</li>
+       <li>Click on any book or story to learn more and access resources.</li>
       </ul>
      </section>
 
      <section class="card-research">
       <h2><i class="ti ti-file-search"></i> Research</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  vehicula interdum enim sed mollis. Praesent nec est in risus ullamcorper tristique. Sed vel condimentum leo, a vestibulum odio. Suspendisse  mattis porta mi. Integer tempus quis metus sit amet volutpat. Duis  interdum turpis id nisl condimentum, non pellentesque libero iaculis.  Donec feugiat consectetur lacus nec imperdiet. Nulla id malesuada sem.</p>
+      <p>Research shows that reading inspirational content and stories of resilience can significantly improve mental well-being. This section provides curated resources to help you find hope, gain perspective, and discover that you're not alone in your journey toward healing.</p>
      </section>
    </aside>
 
@@ -56,25 +54,20 @@
 
   <section id="heartbreak-stories">
    <div class="divider">
-     <h2>Heartbreak stories of famous people</h2>
+    <h2>Heartbreak stories of famous people</h2>
    </div>
 
    <div class="slider-container">
     <div class="img-slider-btns">
-     <button class="prev-btn slider-btn"><i class="ti ti-arrow-badge-left"></i></button>
-     <button class="next-btn slider-btn"><i class="ti ti-arrow-badge-right"></i></button>
+     <button class="prev-btn slider-btn" id="storiesPrevBtn"><i class="ti ti-arrow-badge-left"></i></button>
+     <button class="next-btn slider-btn" id="storiesNextBtn"><i class="ti ti-arrow-badge-right"></i></button>
     </div>
 
-    <div class="slider-track">
-     <a href="#" class="slide"><img src="./assets/images/webp/img1.webp" alt=""></a>
-     <a href="#" class="slide"><img src="./assets/images/webp/img1.webp" alt=""></a>
-     <a href="#" class="slide"><img src="./assets/images/webp/img1.webp" alt=""></a>
-     <a href="#" class="slide"><img src="./assets/images/webp/img2.webp" alt=""></a>
-     <a href="#" class="slide"><img src="./assets/images/webp/img2.webp" alt=""></a>
-     <a href="#" class="slide"><img src="./assets/images/webp/img4.webp" alt=""></a>
+    <div class="slider-track" id="storiesTrack">
+     <!-- Stories will be dynamically loaded here -->
     </div>
    </div>
-   
+
   </section>
 
   <section id="books-section">
@@ -82,18 +75,8 @@
     <h2>Recommended books for healing</h2>
    </div>
 
-   <article class="accordion">
-    <div class="accordion-item">
-     <div class="accordion-header">
-      <a href="#" class="accordion-href"><i class="ti ti-book-2"></i> <span class="title">The Body Keeps the Score</span> <span class="author">by Bessel van der Kolk</span></a>
-      <i class="ti ti-chevron-down" id="chevron-btn"></i>
-     </div>
-     <div class="accordion-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis provident illum qui, veritatis incidunt eius molestiae fuga minus minima earum sapiente quasi iste vel nostrum animi dolore, enim fugiat!
-      Dolore libero reiciendis quia voluptas dignissimos accusantium harum labore adipisci, ea, sint voluptates explicabo accusamus exercitationem distinctio quos facere quis amet natus ipsam officiis dicta aliquid iusto praesentium? Vitae, sapiente.
-      Maiores repellat sed nostrum dolores nemo veniam reprehenderit vitae, optio, vero esse explicabo. Quos ipsum, molestiae temporibus sapiente quo error nam aut aliquam dolores nulla facere mollitia sint unde odio.</p>
-     </div>
-    </div>
+   <article class="accordion" id="healingBooksAccordion">
+    <!-- Healing books will be dynamically loaded here -->
    </article>
   </section>
 
@@ -102,21 +85,27 @@
     <h2>Others</h2>
    </div>
 
-   <article class="accordion">
-    <div class="accordion-item">
-     <div class="accordion-header">
-      <a href="#" class="accordion-href"><i class="ti ti-book-2"></i> <span class="title">More books here</span></a>
-      <i class="ti ti-chevron-down" id="chevron-btn"></i>
-     </div>
-     <div class="accordion-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis provident illum qui, veritatis incidunt eius molestiae fuga minus minima earum sapiente quasi iste vel nostrum animi dolore, enim fugiat!
-      Dolore libero reiciendis quia voluptas dignissimos accusantium harum labore adipisci, ea, sint voluptates explicabo accusamus exercitationem distinctio quos facere quis amet natus ipsam officiis dicta aliquid iusto praesentium? Vitae, sapiente.
-      Maiores repellat sed nostrum dolores nemo veniam reprehenderit vitae, optio, vero esse explicabo. Quos ipsum, molestiae temporibus sapiente quo error nam aut aliquam dolores nulla facere mollitia sint unde odio.</p>
-     </div>
-    </div>
+   <article class="accordion" id="othersBooksAccordion">
+    <!-- Other books will be dynamically loaded here -->
    </article>
   </section>
  </main>
+
+ <!-- Modal for story details -->
+ <div id="storyModal" class="story-modal">
+  <div class="story-modal-content">
+   <div class="story-modal-header">
+    <h3 id="storyModalTitle">Story Title</h3>
+    <span class="story-modal-close">&times;</span>
+   </div>
+   <div class="story-modal-body">
+    <p id="storyModalText"></p>
+   </div>
+   <div class="story-modal-footer">
+    <a href="#" id="storyModalLink" target="_blank" class="read-more-btn">Read Full Story →</a>
+   </div>
+  </div>
+ </div>
 
  <?php include './includes/footer.php' ?>
 

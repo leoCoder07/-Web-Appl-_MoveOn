@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+:root {
+ --percentage: 25%;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
+
+ --great-bg-color: hsla(55.91, 92.89%, 49.61%, 50%);
+ --great-color: #6d6605;
+
+ --stable-bg-color: hsla(133.76, 75.17%, 71.57%, 50%);
+ --stable-color: #0e6422;
+
+ --sad-bg-color: hsla(273.15, 67.77%, 58.63%, 50%);
+ --sad-color: #480480;
+
+ --drained-bg-color: hsla(210, 10.81%, 70.98%, 50%);
+ --drained-color: #5d5d5d;
+
+ --overwhelmed-bg-color: hsla(19.43, 96.83%, 50.59%, 50%);
+ --overwhelmed-color: #793413;
+
+ --motivated-bg-color: hsla(190, 100%, 42.35%, 50%);
+ --motivated-color: #023e8a;
+}
+
+body {
+ font-family: "Lexend Deca", sans-serif;
+ min-height: 100vh;
+}
+
+#header-nav li:nth-of-type(4) a {
+ background: linear-gradient(to right, #2ad0e27b, #829cee7b 25%);
+ border: none;
+ border-bottom: 2px solid black;
+ color: black;
+}
+
+main {
+ /* background: linear-gradient(145deg, #f9f3e8 0%, #fff3e6 100%); */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 2rem 1.5rem;
+}
+
+/* main card container */
+.tracker-container {
+ max-width: 1300px;
+ width: 100%;
+ transition: all 0.2s ease;
+}
+
+/* header with "TRACK!" and visual identity */
+.hero {
+ background: #2c2e3a;
+ padding: 1.8rem 2rem;
+ border-bottom: 5px solid #ffb347;
+}
+
+.hero h1 {
+ font-size: 2.6rem;
+ font-weight: 800;
+ letter-spacing: -0.5px;
+ background: linear-gradient(135deg, #ffd166, #ffb347);
+ background-clip: text;
+ -webkit-background-clip: text;
+ color: transparent;
+ display: inline-block;
+ text-shadow: none;
+}
+
+.hero p {
+ color: #cfd5e6;
+ font-weight: 500;
+ margin-top: 0.3rem;
+ font-size: 1rem;
+}
+
+/* calendar navigation */
+.calendar-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+ flex-wrap: wrap;
+ gap: 20px;
+ padding: 1em 0;
+}
+
+.calendar-head {
+ display: flex;
+ flex: 1;
+ justify-content: space-between;
+ gap: 2em;
+}
+
+.month-year {
+ font-size: clamp(0.7rem, 2vw + 5px, 1.2rem);
+ font-weight: 700;
+ background: #a5b7f3;
+ padding: 0.4rem 1.4rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ color: #040b1f;
+ letter-spacing: 0.5px;
+}
+
+.calendar-nav-btn {
+ border: none;
+ font-family: "Lexend Deca", sans-serif;
+ font-size: clamp(2rem, 2vw + 5px, 2.5rem);
+ font-weight: bold;
+ cursor: pointer;
+ transition: all 0.2s;
+ background: none;
+}
+
+/* weekdays header */
+.calendar-weekdays {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ background: #a5ebf3;
+ padding: 0.8rem 0;
+ text-align: center;
+ font-weight: 700;
+ color: #06292d;
+ border: 2px solid #1fcde0;
+ font-size: 0.9rem;
+}
+
+/* calendar grid */
+.calendar-grid {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ min-height: 480px;
+ border-left: 2px solid #1fcde0;
+}
+
+.calendar-day {
+ border-right: 2px solid #1fcde0;
+ border-bottom: 2px solid #1fcde0;
+ min-height: 100px;
+ padding: 0.6rem;
+ background: #ffffffd9;
+ transition: all 0.1s;
+ position: relative;
+}
+
+/* empty cells (prev/next month filler) */
+.calendar-day.empty {
+ background: #e9e9fc;
+ opacity: 0.6;
+}
+
+.day-number {
+ font-weight: 400;
+ font-size: 0.9rem;
+ color: #0e0c5a;
+ margin-bottom: 0.5rem;
+ padding: 0.1rem 0.5rem;
+ border-radius: 30px;
+}
+
+.calendar-day.empty .day-number {
+ opacity: 0.5;
+}
+
+/* mood marker inside cell */
+.mood-marker {
+ margin-top: 0.4rem;
+ font-size: 1rem;
+ background: #d2f5f9;
+ border: 1px solid #0c525a;
+ border-radius: 5px;
+ padding: 0.3em 0.5em;
+ display: inline-block;
+ max-width: 100%;
+ word-break: keep-all;
+ font-weight: 500;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* special today highlight */
+.calendar-day.today {
+ background: #1fcde0;
+}
+
+/* ! aside */
+
+/* mood selection panel */
+.mood-panel {
+ padding: 2em 0;
+ display: flex;
+ flex-wrap: wrap-reverse;
+ gap: 2em;
+}
+
+@media (width <= 1185px) {
+ .mood-panel {
+  flex-direction: column-reverse;
+ }
+}
+
+.mood-panel .main-func-section {
+ display: flex;
+ align-self: flex-end;
+ flex: 2;
+ gap: 15px;
+ height: fit-content;
+}
+
+.mood-panel .sidebar {
+ flex: 1;
+ /* width: 650px; */
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ /* background: lightblue; */
+ min-height: 100%;
+}
+
+.tracker-container header {
+ line-height: clamp(1.5em, 5vw, 2.5em);
+}
+
+.tracker-container header > h1 {
+ font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.tracker-container header > p {
+ font-size: clamp(0.6rem, 3vw, 2rem);
+ font-weight: 300;
+}
+
+.sidebar .info-input {
+ display: flex;
+ flex-direction: column;
+ /* background-color: red; */
+ flex: 1;
+ gap: 15px;
+}
+
+.sidebar :is(.card-tutorial, .card-research) {
+ flex: 1;
+}
+
+.sidebar .card-tutorial {
+ background: hsla(350, 75.82%, 64.31%, 20%);
+ padding: 1em;
+ border-left: 5px solid #e95f76;
+}
+
+.sidebar .card-research {
+ background: hsla(225.56, 76.06%, 72.16%, 20%);
+ padding: 1em;
+ font-size: clamp(0.6rem, 2vw + 2px, 1rem);
+ font-weight: 300;
+}
+
+.sidebar :is(.card-tutorial h2, .card-research h2) {
+ font-size: clamp(1.1rem, 3vw, 1.5rem);
+ font-weight: 300;
+ margin-bottom: 0.3em;
+}
+
+.sidebar .card-tutorial ul {
+ font-size: clamp(0.6rem, 2vw + 2px, 1rem);
+ margin-left: 1em;
+ font-weight: 300;
+}
+
+@media (width <= 1444px) {
+ #app-container .sidebar {
+  width: 100%;
+ }
+ .sidebar .info-input {
+  flex-direction: column-reverse;
+ }
+ .sidebar .input-area {
+  flex: 1 300px;
+ }
+}
+
+.mood-question {
+ font-size: 1.5rem;
+ font-weight: 600;
+ color: #003c42;
+ padding-bottom: 0.5em;
+ border-bottom: 1px solid;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+.mood-buttons {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1rem;
+ margin-top: 1rem;
+}
+
+.mood-btn {
+ /* flex: 1 1 0; */
+ flex: 1;
+ font-family: "Lexend Deca", sans-serif;
+ background: none;
+ padding: 0.6rem 1.4rem;
+ border-radius: 10px;
+ border: 2px solid transparent;
+ font-weight: 600;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: 0.1s linear;
+ text-align: center;
+}
+
+.mood-btn:nth-child(1) {
+ background: var(--great-bg-color);
+ color: var(--great-color);
+}
+.mood-btn:nth-child(2) {
+ background: var(--stable-bg-color);
+ color: var(--stable-color);
+}
+.mood-btn:nth-child(3) {
+ background: var(--sad-bg-color);
+ color: var(--sad-color);
+}
+.mood-btn:nth-child(4) {
+ background: var(--drained-bg-color);
+ color: var(--drained-color);
+}
+.mood-btn:nth-child(5) {
+ background: var(--overwhelmed-bg-color);
+ color: var(--overwhelmed-color);
+}
+.mood-btn:nth-child(6) {
+ background: var(--motivated-bg-color);
+ color: var(--motivated-color);
+}
+
+.mood-btn:hover {
+ opacity: 0.8;
+ transform: scale(0.98);
+}
+
+.mood-btn.active {
+ border-color: #5d5d5d;
+}
+
+.primary-btn {
+ flex: 1;
+ background: #007a87;
+ color: #82f4ff;
+ border: none;
+ padding: 0.5em;
+ border-radius: 10px;
+ font-family: "Lexend Deca", sans-serif;
+ font-weight: 400;
+ font-size: clamp(1rem, 5vw + 10px, 3rem);
+ cursor: pointer;
+ transition: 0.1s;
+ max-height: 150px;
+}
+
+.primary-btn:hover {
+ background: #3b552b;
+ transform: scale(0.97);
+}
+
+.danger-btn {
+ background: #621708;
+ color: #fed0bb;
+}
+.danger-btn:hover {
+ background: #b16242;
+}
+
+.info-message {
+ margin-top: 0.8rem;
+ font-size: 0.85rem;
+ color: #aa7f60;
+ font-style: italic;
+}
+
+/* research / extra footer */
+.research-note {
+ background: #faf0e6;
+ padding: 1.2rem 2rem;
+ margin-top: 0.5rem;
+ color: #6f4f34;
+ border-top: 1px solid #ffe0ca;
+ font-size: 0.85rem;
+ line-height: 1.4;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+ .calendar-day {
+  min-height: 10px;
+  padding: 0.3rem;
+ }
+ .day-number {
+  font-size: 0.7rem;
+ }
+ .mood-marker {
+  font-size: 0.5rem;
+  padding: 0.1rem 0.3rem;
+ }
+
+ .hero h1 {
+  font-size: 2rem;
+ }
+}
+
+@media (max-width: 550px) {
+ .mood-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+ }
+ .mood-question {
+  font-size: 1.2rem;
+ }
+}
