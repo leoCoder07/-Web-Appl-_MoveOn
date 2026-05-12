@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadQuestion(qId) {
- fetch(`/moveon/get-question.php?q=${qId}`)
+ fetch(`get-question.php?q=${qId}`)
   .then((response) => response.json())
   .then((data) => {
    if (data.success) {
@@ -56,7 +56,7 @@ function updateUI(data) {
 }
 
 function saveAnswer(questionId, answer) {
- fetch("/moveon/track-api.php", {
+ fetch("process-onboarding.php", {
   method: "POST",
   headers: {
    "Content-type": "application/x-www-form-urlencoded",
@@ -73,7 +73,7 @@ function saveAnswer(questionId, answer) {
 }
 
 function loadSavedAnswer(questionId) {
- fetch(`/moveon/get-saved-answer.php?question_id=${questionId}`)
+ fetch(`get-saved-answer.php?question_id=${questionId}`)
   .then((response) => response.json())
   .then((data) => {
    if (data.answer) {

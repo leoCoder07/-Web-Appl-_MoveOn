@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 require_once 'process-authentication.php';
-require_once 'process-post-authentication.php'; 
+require_once 'process-post-authentication.php';
 
 ?>
 
@@ -11,6 +11,7 @@ require_once 'process-post-authentication.php';
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="assets/css/header&footer/header.css">
  <link rel="stylesheet" href="assets/css/moveon.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
@@ -28,19 +29,19 @@ require_once 'process-post-authentication.php';
   <section class="hero" id="hero">
    <div class="hero-inside">
     <div class="hero-content">
-      <h1>Healing isn't a race.<br>Take the first step at your own pace.</h1>
-      <p>You are more than what happened to you. Let's start rebuilding today.</p>
+     <h1>Healing isn't a race.<br>Take the first step at your own pace.</h1>
+     <p>You are more than what happened to you. Let's start rebuilding today.</p>
     </div>
- 
+
     <div class="hero-nav">
-      <div class="thumbnails">
-       <img src="assets/images/webp/img1.webp" class="thumb active" data-index="0">
-       <img src="assets/images/webp/img2.webp" class="thumb" data-index="1">
-       <img src="assets/images/webp/img3.webp" class="thumb" data-index="2">
-       <img src="assets/images/webp/img4.webp" class="thumb" data-index="3">
+     <div class="thumbnails">
+      <img src="assets/images/webp/img1.webp" class="thumb active" data-index="0">
+      <img src="assets/images/webp/img2.webp" class="thumb" data-index="1">
+      <img src="assets/images/webp/img3.webp" class="thumb" data-index="2">
+      <img src="assets/images/webp/img4.webp" class="thumb" data-index="3">
      </div>
     </div>
- 
+
     <div class="dots">
      <span class="dot active" data-index="0"></span>
      <span class="dot" data-index="1"></span>

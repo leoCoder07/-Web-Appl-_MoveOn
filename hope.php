@@ -1,9 +1,18 @@
+<?php
+
+require_once 'process-authentication.php';
+require_once 'process-post-authentication.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="assets/css/header&footer/header.css">
  <link rel="stylesheet" href="assets/css/hope.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
@@ -96,7 +105,7 @@
   <div class="story-modal-content">
    <div class="story-modal-header">
     <h3 id="storyModalTitle">Story Title</h3>
-    <span class="story-modal-close">&times;</span>
+    <span class="story-modal-close"><i class="ti ti-circle-dashed-x"></i></span>
    </div>
    <div class="story-modal-body">
     <p id="storyModalText"></p>

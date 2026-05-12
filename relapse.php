@@ -1,6 +1,6 @@
-<?php 
+<?php
 require_once 'process-authentication.php';
-require_once 'process-post-authentication.php'; 
+require_once 'process-post-authentication.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,21 +9,22 @@ require_once 'process-post-authentication.php';
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="assets/css/header&footer/header.css">
  <link rel="stylesheet" href="assets/css/relapse.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
  <title>Relapse - Music for Your Journey</title>
  <script>
-    window.userSession = {
-        isGuest: <?php echo isset($_SESSION['guest_answers']) ? 'true' : 'false'; ?>,
-        userId: <?php echo $_SESSION['user_id'] ?? 'null'; ?>
-    };
+  window.userSession = {
+   isGuest: <?php echo isset($_SESSION['guest_answers']) ? 'true' : 'false'; ?>,
+   userId: <?php echo $_SESSION['user_id'] ?? 'null'; ?>
+  };
  </script>
 </head>
 
 <body>
- 
+
  <?php include './includes/header.php' ?>
 
  <main>
@@ -44,7 +45,7 @@ require_once 'process-post-authentication.php';
        <img src="./assets/images/svg/cd-blue.svg" alt="cd-player">
       </div>
      </div>
-     
+
      <!-- Playlist Display (hidden initially, shows when playlist is selected) -->
      <div id="playlistDisplay" class="playlist-display" style="display: none;">
       <div class="playlist-header">
@@ -60,7 +61,7 @@ require_once 'process-post-authentication.php';
      </div>
     </div>
    </div>
-   
+
    <aside class="sidebar">
     <header>
      <h1>RELAPSE!</h1>

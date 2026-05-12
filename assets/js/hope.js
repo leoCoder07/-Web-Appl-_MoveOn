@@ -312,7 +312,7 @@ class HopeFeature {
   text.textContent = story.story_text;
   link.href = story.story_link || '#';
 
-  modal.style.display = 'block';
+  modal.style.display = 'flex';
 
   const closeBtn = document.querySelector('.story-modal-close');
   if (closeBtn) {

@@ -12,6 +12,7 @@ $is_guest = isset($_SESSION['guest_answers']);
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="assets/css/header&footer/header.css">
  <link rel="stylesheet" href="assets/css/profile.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
@@ -69,8 +70,8 @@ $is_guest = isset($_SESSION['guest_answers']);
         <p id="displayBio">Loading bio...</p>
        </div>
        <button class="edit-bio-btn" id="editBioBtn" title="Edit bio">
-         <i class="ti ti-edit"></i> Edit bio
-        </button>
+        <i class="ti ti-edit"></i> Edit bio
+       </button>
       </div>
      </div>
 
@@ -100,7 +101,7 @@ $is_guest = isset($_SESSION['guest_answers']);
   <div class="modal-content modal-medium">
    <div class="modal-header">
     <h3><i class="ti ti-palette"></i> Choose Your Profile Icon</h3>
-    <span class="close-modal">&times;</span>
+    <span class="close-modal"><i class="ti ti-circle-dashed-x"></i></span>
    </div>
    <div class="modal-body">
     <div class="icon-grid" id="iconGrid">
@@ -115,7 +116,7 @@ $is_guest = isset($_SESSION['guest_answers']);
   <div class="modal-content">
    <div class="modal-header">
     <h3><i class="ti ti-user-edit"></i> Change Username</h3>
-    <span class="close-modal">&times;</span>
+    <span class="close-modal"><i class="ti ti-circle-dashed-x"></i></span>
    </div>
    <div class="modal-body">
     <p class="info-text">You can change your username <strong>3 times per month</strong>.</p>
@@ -142,7 +143,7 @@ $is_guest = isset($_SESSION['guest_answers']);
   <div class="modal-content">
    <div class="modal-header">
     <h3><i class="ti ti-edit"></i> Edit Bio</h3>
-    <span class="close-modal">&times;</span>
+    <span class="close-modal"><i class="ti ti-circle-dashed-x"></i></span>
    </div>
    <div class="modal-body">
     <div class="form-group">

@@ -11,20 +11,20 @@
    <div class="explore">
     <h3>EXPLORE</h3>
     <ul class="ftr-nav-btns">
-     <li><a href="">Docs</a></li>
-     <li><a href="">FAQ's</a></li>
-     <li><a href="">Contact</a></li>
-     <li><a href="">About</a></li>
-     <li><a href="">Books</a></li>
+     <li><a href="docs.php">Docs</a></li>
+     <li><a href="faqs.php">FAQ's</a></li>
+     <li><a href="contact.php">Contact</a></li>
+     <li><a href="about.php">About</a></li>
+     <!-- <li><a href="">Books</a></li> -->
     </ul>
    </div>
    <div class="navigate">
     <h3>NAVIGATE</h3>
     <ul class="ftr-nav-btns">
-     <li><a href="">Vent</a></li>
-     <li><a href="">Relapse</a></li>
-     <li><a href="">Hope</a></li>
-     <li><a href="">Track</a></li>
+     <li><a href="vent.php">Vent</a></li>
+     <li><a href="relapse.php">Relapse</a></li>
+     <li><a href="hope.php">Hope</a></li>
+     <li><a href="track.php">Track</a></li>
     </ul>
    </div>
   </div>

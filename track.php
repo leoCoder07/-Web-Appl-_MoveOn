@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 require_once 'process-authentication.php';
-require_once 'process-post-authentication.php'; 
+require_once 'process-post-authentication.php';
 
 ?>
 
@@ -11,6 +11,7 @@ require_once 'process-post-authentication.php';
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="assets/css/header&footer/header.css">
  <link rel="stylesheet" href="assets/css/track.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
@@ -64,7 +65,7 @@ require_once 'process-post-authentication.php';
 
       <section class="card-research">
        <h2><i class="ti ti-file-search"></i> Research</h2>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  vehicula interdum enim sed mollis. Praesent nec est in risus ullamcorper tristique. Sed vel condimentum leo, a vestibulum odio. Suspendisse  mattis porta mi. Integer tempus quis metus sit amet volutpat. Duis  interdum turpis id nisl condimentum, non pellentesque libero iaculis.  Donec feugiat consectetur lacus nec imperdiet. Nulla id malesuada sem.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula interdum enim sed mollis. Praesent nec est in risus ullamcorper tristique. Sed vel condimentum leo, a vestibulum odio. Suspendisse mattis porta mi. Integer tempus quis metus sit amet volutpat. Duis interdum turpis id nisl condimentum, non pellentesque libero iaculis. Donec feugiat consectetur lacus nec imperdiet. Nulla id malesuada sem.</p>
       </section>
     </aside>
     <div class="main-func-section">
@@ -96,7 +97,9 @@ require_once 'process-post-authentication.php';
 
  <?php include './includes/footer.php' ?>
 
+ <script src="assets/js/header.js"></script>
  <script src="assets/js/track.js"></script>
+
 
 </body>
 

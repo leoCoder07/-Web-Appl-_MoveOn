@@ -4,17 +4,18 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="./assets/css/auth.css">
 
- <?php 
+ <?php
 
-  require_once 'process-authentication.php';
-  // require_once 'process-post-authentication.php';
+ require_once 'process-authentication.php';
+ // require_once 'process-post-authentication.php';
 
-  if (isset($_SESSION['four_digit_code']) || isset($_SESSION['guest_answers'])) {
-   header('Location: moveon.php');
-   exit;
-  }
+ if (isset($_SESSION['four_digit_code']) || isset($_SESSION['guest_answers'])) {
+  header('Location: moveon.php');
+  exit;
+ }
 
  ?>
 
@@ -35,7 +36,7 @@
     <h2>Sign Up</h2>
     <p>Create your first account</p>
     <?php if ($error): ?>
-    <p id="error-message"><?= $error; ?></p>
+     <p id="error-message"><?= $error; ?></p>
     <?php endif ?>
    </div>
 
@@ -44,24 +45,24 @@
      <div class="username-code">
       <div class="username">
        <label for="username">Username</label>
-       <input type="text" name="username" id="username" minlength="3" maxlength="255" value="<?= htmlspecialchars($username_value_sign_up ?? ''); ?>"/>
+       <input type="text" name="username" id="username" minlength="3" maxlength="255" value="<?= htmlspecialchars($username_value_sign_up ?? ''); ?>" />
       </div>
       <div class="user-code">
        <label for="four_digit_code">Code</label>
-       <input type="text" name="four_digit_code" id="four_digit_code" pattern="\d{4}" maxlength="4"  value="<?= htmlspecialchars($four_digit_code ?? ''); ?>"/>
+       <input type="text" name="four_digit_code" id="four_digit_code" pattern="\d{4}" maxlength="4" value="<?= htmlspecialchars($four_digit_code ?? ''); ?>" />
       </div>
      </div>
 
      <div class="password">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password"  autocomplete="new-password">
+      <input type="password" name="password" id="password" autocomplete="new-password">
      </div>
 
      <div class="confirm-password">
       <label for="confirm_password">Confirm password</label>
-      <input type="password" name="confirm_password" id="confirm_password"  autocomplete="new-password">
+      <input type="password" name="confirm_password" id="confirm_password" autocomplete="new-password">
      </div>
-     
+
      <p class="consent">By signing up, you consent to MoveOn's Terms of Use and Privacy Policy.</p>
 
      <div class="quess-or-login">
@@ -80,9 +81,9 @@
     <h2>Log In</h2>
     <p>Input existing account</p>
     <?php if ($error): ?>
-    <p id="error-message"><?= $error; ?></p>
+     <p id="error-message"><?= $error; ?></p>
     <?php elseif ($success): ?>
-    <p id="success-message"><?= $success; ?></p>
+     <p id="success-message"><?= $success; ?></p>
     <?php endif ?>
    </div>
 
@@ -91,7 +92,7 @@
      <div class="username-code">
       <div class="username">
        <label for="username">Username</label>
-       <input type="text" name="username" id="username" value="<?= htmlspecialchars($username_value_login ?? '') ?>" minlength="3" maxlength="255"/>
+       <input type="text" name="username" id="username" value="<?= htmlspecialchars($username_value_login ?? '') ?>" minlength="3" maxlength="255" />
       </div>
      </div>
 
@@ -99,7 +100,7 @@
       <label for="password">Password</label>
       <input type="password" name="password" id="password" autocomplete="current-password">
      </div>
-     
+
      <p class="consent">By logging in, you consent to MoveOn's Terms of Use and Privacy Policy.</p>
 
      <div class="quess-or-login">
@@ -118,9 +119,9 @@
     <h2>Recover account</h2>
     <p>Remember you username / code</p>
     <?php if ($error): ?>
-    <p id="error-message"><?= $error; ?></p>
+     <p id="error-message"><?= $error; ?></p>
     <?php elseif ($success): ?>
-    <p id="success-message"><?= $success; ?></p>
+     <p id="success-message"><?= $success; ?></p>
     <?php endif ?>
    </div>
 
@@ -128,10 +129,10 @@
     <div class="input-box">
      <div class="username-code">
       <div class="username">
-       <input class="recover-input" type="text" name="identifier" id="username" minlength="3" maxlength="255" placeholder="username or 4 digit code"/>
+       <input class="recover-input" type="text" name="identifier" id="username" minlength="3" maxlength="255" placeholder="username or 4 digit code" />
       </div>
      </div>
-     
+
      <!-- <p class="consent">By logging in, you consent to MoveOn's Terms of Use and Privacy Policy.</p> -->
 
      <div class="quess-or-login">

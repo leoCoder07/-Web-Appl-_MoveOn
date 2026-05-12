@@ -1,12 +1,11 @@
+<?php
 
-<?php 
+require_once 'process-authentication.php';
 
- require_once 'process-authentication.php';
-
- if (isset($_SESSION['user_id']) || isset($_SESSION['guest_answers'])) {
-  header('Location: moveon.php');
-  exit;
- }
+if (isset($_SESSION['user_id']) || isset($_SESSION['guest_answers'])) {
+ header('Location: moveon.php');
+ exit;
+}
 
 ?>
 
@@ -16,6 +15,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="assets/images/svg/moveon-logo.svg" type="image/svg">
  <link rel="stylesheet" href="./assets/css/onboarding-styles.css">
  <title>Onboarding | Questions</title>
 </head>
