@@ -2,8 +2,6 @@
 
 require_once './includes/db-connect.php';
 
-
-
 $error = '';
 $success = '';
 

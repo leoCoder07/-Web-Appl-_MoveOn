@@ -1,6 +1,6 @@
 <?php
 
-require_once 'process-authentication.php';
+require_once './scripts/process/process-authentication.php';
 
 if (isset($_SESSION['user_id']) || isset($_SESSION['guest_answers'])) {
  header('Location: moveon.php');
@@ -54,7 +54,7 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['guest_answers'])) {
   <h4>Made with &#x2764; by <a href="#container" target="_blank">@johnleojariel</a></h4>
  </footer>
 
- <script src="./assets/js/onboarding.js"></script>
+ <script src="assets/js/onboarding.js"></script>
 
 </body>
 

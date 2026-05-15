@@ -1,6 +1,6 @@
 <?php
-require_once 'process-authentication.php';
-require_once 'process-post-authentication.php';
+require_once './scripts/process/process-authentication.php';
+require_once './scripts/process/process-post-authentication.php';
 ?>
 
 <!DOCTYPE html>

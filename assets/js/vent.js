@@ -55,7 +55,9 @@ class VentJar {
     this.loadFromLocalStorage();
     this.renderPapers();
    } else {
-    const response = await fetch("vent-api.php?action=get_messages");
+    const response = await fetch(
+     "./scripts/api/vent-api.php?action=get_messages",
+    );
     const data = await response.json();
 
     if (data.success) {
@@ -115,7 +117,7 @@ class VentJar {
    formData.append("action", "save_message");
    formData.append("message", message);
 
-   const response = await fetch("vent-api.php", {
+   const response = await fetch("./scripts/api/vent-api.php", {
     method: "POST",
     body: formData,
    });
@@ -158,7 +160,7 @@ class VentJar {
     formData.append("action", "delete_message");
     formData.append("message_id", messageId);
 
-    const response = await fetch("vent-api.php", {
+    const response = await fetch("./scripts/api/vent-api.php", {
      method: "POST",
      body: formData,
     });

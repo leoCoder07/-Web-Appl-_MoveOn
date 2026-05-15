@@ -481,83 +481,84 @@
     </div>
    </div>
   </div>
+ </div>
 
-  <script>
-   document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-     const answer = question.nextElementSibling;
-     const icon = question.querySelector('i');
-     answer.classList.toggle('show');
-     icon.style.transform = answer.classList.contains('show') ? 'rotate(90deg)' : 'rotate(0deg)';
-    });
+ <script>
+  document.querySelectorAll('.faq-question').forEach(question => {
+   question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const icon = question.querySelector('i');
+    answer.classList.toggle('show');
+    icon.style.transform = answer.classList.contains('show') ? 'rotate(90deg)' : 'rotate(0deg)';
    });
+  });
 
-   document.querySelectorAll('.category-header').forEach(header => {
-    header.addEventListener('click', () => {
-     const items = header.nextElementSibling;
-     const toggle = header.querySelector('.category-toggle');
-     items.classList.toggle('active');
-     toggle.classList.toggle('rotated');
-    });
+  document.querySelectorAll('.category-header').forEach(header => {
+   header.addEventListener('click', () => {
+    const items = header.nextElementSibling;
+    const toggle = header.querySelector('.category-toggle');
+    items.classList.toggle('active');
+    toggle.classList.toggle('rotated');
    });
+  });
 
-   document.querySelectorAll('.faq-items').forEach(items => {
-    items.classList.add('active');
+  document.querySelectorAll('.faq-items').forEach(items => {
+   items.classList.add('active');
+  });
+
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+   if (window.scrollY > 300) {
+    backToTop.classList.add('visible');
+   } else {
+    backToTop.classList.remove('visible');
+   }
+  });
+
+  backToTop.addEventListener('click', () => {
+   window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
    });
+  });
 
-   const backToTop = document.getElementById('backToTop');
-   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-     backToTop.classList.add('visible');
-    } else {
-     backToTop.classList.remove('visible');
-    }
-   });
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
 
-   backToTop.addEventListener('click', () => {
-    window.scrollTo({
-     top: 0,
-     behavior: 'smooth'
-    });
-   });
+  searchInput.addEventListener('input', function() {
+   const searchTerm = this.value.toLowerCase().trim();
+   const allItems = document.querySelectorAll('.faq-item');
+   let visibleCount = 0;
 
-   const searchInput = document.getElementById('searchInput');
-   const noResults = document.getElementById('noResults');
-
-   searchInput.addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase().trim();
-    const allItems = document.querySelectorAll('.faq-item');
-    let visibleCount = 0;
-
-    if (searchTerm === '') {
-     allItems.forEach(item => {
-      item.style.display = '';
-      noResults.classList.remove('show');
-     });
-     return;
-    }
-
+   if (searchTerm === '') {
     allItems.forEach(item => {
-     const question = item.querySelector('.faq-question').textContent.toLowerCase();
-     const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
-
-     if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-      item.style.display = '';
-      visibleCount++;
-     } else {
-      item.style.display = 'none';
-     }
-    });
-
-    if (visibleCount === 0) {
-     noResults.classList.add('show');
-    } else {
+     item.style.display = '';
      noResults.classList.remove('show');
+    });
+    return;
+   }
+
+   allItems.forEach(item => {
+    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+     item.style.display = '';
+     visibleCount++;
+    } else {
+     item.style.display = 'none';
     }
    });
-  </script>
 
-  <?php include 'includes/footer.php'; ?>
+   if (visibleCount === 0) {
+    noResults.classList.add('show');
+   } else {
+    noResults.classList.remove('show');
+   }
+  });
+ </script>
+
+ <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

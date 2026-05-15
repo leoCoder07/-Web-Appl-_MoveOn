@@ -43,7 +43,7 @@ async function saveMoodToServer(date, mood) {
  formData.append("mood_text", mood);
 
  try {
-  const response = await fetch("/moveon/track-api.php", {
+  const response = await fetch("./scripts/api/track-api.php", {
    method: "POST",
    body: formData,
   });
@@ -61,7 +61,7 @@ async function removeMoodFromServer(date) {
  formData.append("mood_date", date);
 
  try {
-  const response = await fetch("/moveon/track-api.php", {
+  const response = await fetch("./scripts/api/track-api.php", {
    method: "POST",
    body: formData,
   });
@@ -76,7 +76,7 @@ async function removeMoodFromServer(date) {
 async function loadMoodsFromServer(year, month) {
  try {
   const response = await fetch(
-   `track-api.php?action=get_moods&year=${year}&month=${month}`,
+   `./scripts/api/track-api.php?action=get_moods&year=${year}&month=${month}`,
   );
   const result = await response.json();
 

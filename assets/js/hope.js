@@ -15,7 +15,7 @@ class HopeFeature {
 
  async loadQuote() {
   try {
-   const response = await fetch("hope-api.php?action=get_quote");
+   const response = await fetch("./scripts/api/hope-api.php?action=get_quote");
    const data = await response.json();
 
    if (data.success && data.quote) {
@@ -39,7 +39,9 @@ class HopeFeature {
 
  async loadStories() {
   try {
-   const response = await fetch("hope-api.php?action=get_stories");
+   const response = await fetch(
+    "./scripts/api/hope-api.php?action=get_stories",
+   );
    const data = await response.json();
 
    if (data.success && data.stories) {
@@ -188,7 +190,7 @@ class HopeFeature {
  async loadBooks() {
   try {
    const healingResponse = await fetch(
-    "hope-api.php?action=get_books&category=healing",
+    "./scripts/api/hope-api.php?action=get_books&category=healing",
    );
    const healingData = await healingResponse.json();
 
@@ -202,7 +204,7 @@ class HopeFeature {
    }
 
    const othersResponse = await fetch(
-    "hope-api.php?action=get_books&category=others",
+    "./scripts/api/hope-api.php?action=get_books&category=others",
    );
    const othersData = await othersResponse.json();
 

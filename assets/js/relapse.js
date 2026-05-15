@@ -477,7 +477,7 @@ class MusicPlayer {
   formData.append("is_playing", this.isPlaying);
 
   try {
-   await fetch("music-api.php", {method: "POST", body: formData});
+   await fetch("./scripts/api/music-api.php", {method: "POST", body: formData});
   } catch (error) {
    console.error("Error saving state:", error);
   }
@@ -493,7 +493,7 @@ class MusicPlayer {
   formData.append("duration", 0);
 
   try {
-   await fetch("music-api.php", {method: "POST", body: formData});
+   await fetch("./scripts/api/music-api.php", {method: "POST", body: formData});
   } catch (error) {
    console.error("Error logging listen:", error);
   }
@@ -501,7 +501,9 @@ class MusicPlayer {
 
  async loadSavedState() {
   try {
-   const response = await fetch("music-api.php?action=get_playback_state");
+   const response = await fetch(
+    "./scripts/api/music-api.php?action=get_playback_state",
+   );
    const data = await response.json();
 
    if (data.success && data.state && !data.is_guest) {

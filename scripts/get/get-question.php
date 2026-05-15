@@ -2,9 +2,7 @@
 
 session_start();
 
-
-
-require_once './includes/db-connect.php';
+require_once '../../includes/db-connect.php';
 
 $question_id = isset($_GET['q']) ? $_GET['q'] : 1;
 

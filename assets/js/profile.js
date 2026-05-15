@@ -11,7 +11,9 @@ class ProfileManager {
 
  async loadUserData() {
   try {
-   const response = await fetch("profile-api.php?action=get_user_data");
+   const response = await fetch(
+    "./scripts/api/profile-api.php?action=get_user_data",
+   );
    const data = await response.json();
 
    if (data.success && data.user) {
@@ -52,7 +54,7 @@ class ProfileManager {
  async loadQuestionsAnswers() {
   try {
    const response = await fetch(
-    "profile-api.php?action=get_questions_with_answers",
+    "./scripts/api/profile-api.php?action=get_questions_with_answers",
    );
    const data = await response.json();
 
@@ -175,7 +177,7 @@ class ProfileManager {
    formData.append("action", "update_profile_icon");
    formData.append("icon", iconClass);
 
-   const response = await fetch("profile-api.php", {
+   const response = await fetch("./scripts/api/profile-api.php", {
     method: "POST",
     body: formData,
    });
@@ -245,7 +247,7 @@ class ProfileManager {
     formData.append("action", "update_username");
     formData.append("username", newUsername);
 
-    const response = await fetch("profile-api.php", {
+    const response = await fetch("./scripts/api/profile-api.php", {
      method: "POST",
      body: formData,
     });
@@ -314,7 +316,7 @@ class ProfileManager {
     formData.append("action", "update_bio");
     formData.append("bio", bio);
 
-    const response = await fetch("profile-api.php", {
+    const response = await fetch("./scripts/api/profile-api.php", {
      method: "POST",
      body: formData,
     });

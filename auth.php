@@ -9,7 +9,7 @@
 
  <?php
 
- require_once 'process-authentication.php';
+ require_once './scripts/process/process-authentication.php';
 
  if (isset($_SESSION['four_digit_code']) || isset($_SESSION['guest_answers'])) {
   header('Location: moveon.php');
