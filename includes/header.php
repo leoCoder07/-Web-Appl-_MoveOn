@@ -1,5 +1,5 @@
 <?php
-// Get user's profile icon if logged in
+
 $header_profile_icon = 'gradient-1';
 if (isset($_SESSION['user_id']) && !isset($_SESSION['guest_answers'])) {
  require_once 'db-connect.php';
@@ -40,7 +40,6 @@ if (isset($_SESSION['user_id']) && !isset($_SESSION['guest_answers'])) {
      <div class="profile-circle gradient-default small-icon">
       <i class="ti ti-user"></i>
      </div>
-     <span class="header-username">Guest</span>
     <?php elseif (isset($_SESSION['user_id'])): ?>
      <div class="profile-circle <?php echo $header_profile_icon; ?> small-icon" id="headerProfileIcon">
       <span><?php echo strtoupper(substr($_SESSION['username'] ?? 'U', 0, 1)); ?></span>
@@ -49,7 +48,7 @@ if (isset($_SESSION['user_id']) && !isset($_SESSION['guest_answers'])) {
    </div>
    <div class="dropdown-list">
     <a id="view-profile-btn" href="profile.php">View Profile <i class="ti ti-user"></i></a>
-    <!-- <button type="button" class="setting-btn">Settings <i class="ti ti-settings"></i></button> -->
+
     <form method="POST" action="">
      <button type="submit" name="logout">Log Out <i class="ti ti-logout"></i></button>
     </form>
@@ -73,7 +72,6 @@ if (isset($_SESSION['user_id']) && !isset($_SESSION['guest_answers'])) {
        <div class="profile-circle gradient-default small-icon">
         <i class="ti ti-user"></i>
        </div>
-       <span class="header-username">Guest</span>
       <?php elseif (isset($_SESSION['user_id'])): ?>
        <div class="profile-circle <?php echo $header_profile_icon; ?> small-icon" id="headerProfileIcon">
         <span><?php echo strtoupper(substr($_SESSION['username'] ?? 'U', 0, 1)); ?></span>
@@ -83,7 +81,7 @@ if (isset($_SESSION['user_id']) && !isset($_SESSION['guest_answers'])) {
      </div>
 
      <div class="func-btn">
-      <!-- <button type="button" class="setting-btn"><i class="ti ti-settings"></i></button> -->
+
       <form method="POST" action="">
        <button type="submit" name="logout" class="log-out-btn" title="Logout"><i class="ti ti-logout"></i></button>
       </form>

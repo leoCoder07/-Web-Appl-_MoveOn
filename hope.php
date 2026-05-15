@@ -5,7 +5,6 @@ require_once 'process-post-authentication.php';
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +72,6 @@ require_once 'process-post-authentication.php';
     </div>
 
     <div class="slider-track" id="storiesTrack">
-     <!-- Stories will be dynamically loaded here -->
     </div>
    </div>
 
@@ -85,7 +83,6 @@ require_once 'process-post-authentication.php';
    </div>
 
    <article class="accordion" id="healingBooksAccordion">
-    <!-- Healing books will be dynamically loaded here -->
    </article>
   </section>
 
@@ -95,12 +92,10 @@ require_once 'process-post-authentication.php';
    </div>
 
    <article class="accordion" id="othersBooksAccordion">
-    <!-- Other books will be dynamically loaded here -->
    </article>
   </section>
  </main>
 
- <!-- Modal for story details -->
  <div id="storyModal" class="story-modal">
   <div class="story-modal-content">
    <div class="story-modal-header">

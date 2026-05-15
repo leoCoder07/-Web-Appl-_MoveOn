@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,8 +8,8 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 }
 
 #header-nav li:nth-of-type(3) a {
- background: linear-gradient(to right, #2ad0e27b, #829CEE7b 25%);
+ background: linear-gradient(to right, #2ad0e27b, #829cee7b 25%);
  border: none;
  border-bottom: 2px solid black;
  color: black;
@@ -43,10 +43,12 @@ body {
 #app-container .quote-container {
  width: 100%;
  height: 100%;
- border: 2px solid #625FE9;
+ border: 2px solid #625fe9;
  border-radius: 15px;
 
- background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../images/webp/img4.webp");
+ background-image:
+  linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
+  url("../images/webp/img4.webp");
  background-size: cover;
  background-position: center;
 
@@ -80,7 +82,6 @@ body {
  display: flex;
  flex-direction: column;
  gap: 15px;
- /* background: lightblue; */
  min-height: 100%;
 }
 
@@ -88,11 +89,11 @@ body {
  line-height: clamp(1.5em, 5vw, 2.5em);
 }
 
-.sidebar header>h1 {
+.sidebar header > h1 {
  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
-.sidebar header>p {
+.sidebar header > p {
  font-size: clamp(1.2rem, 3vw, 2rem);
  font-weight: 300;
 }
@@ -100,7 +101,6 @@ body {
 .sidebar .info-input {
  display: flex;
  flex-direction: column;
- /* background-color: red; */
  flex: 1;
  gap: 15px;
 }
@@ -112,7 +112,7 @@ body {
 .sidebar .card-tutorial {
  background: hsla(350, 75.82%, 64.31%, 20%);
  padding: 1em;
- border-left: 5px solid #E95F76;
+ border-left: 5px solid #e95f76;
 }
 
 .sidebar .card-research {
@@ -148,8 +148,6 @@ body {
  }
 }
 
-/* ! heartbreak stories styles */
-
 #heartbreak-stories {
  max-width: 1400px;
  width: 100%;
@@ -161,11 +159,11 @@ body {
  font-size: clamp(0.7rem, 3vw, 1.5rem);
  font-weight: 400;
  text-align: left;
- color: #5D5D5D;
+ color: #5d5d5d;
 }
 
 .divider {
- border-top: 2px solid #5D5D5D;
+ border-top: 2px solid #5d5d5d;
  padding: 10px;
 }
 
@@ -181,13 +179,12 @@ body {
 .img-slider-btns button {
  font-size: clamp(1.5rem, 3vw, 2rem);
  padding: 0 1em;
- background: #8AE6F0;
+ background: #8ae6f0;
  border-radius: 10px;
  border: none;
  outline: none;
  cursor: pointer;
 }
-
 
 #heartbreak-stories .slider-container {
  width: 100%;
@@ -207,7 +204,7 @@ body {
 
 .slide img {
  width: 100%;
- border-top: 5px solid #6C63FF;
+ border-top: 5px solid #6c63ff;
 }
 
 @media (max-width: 985px) {
@@ -215,8 +212,6 @@ body {
   flex: 0 0 100%;
  }
 }
-
-/* ! books section styles */
 
 #books-section {
  max-width: 1400px;
@@ -229,7 +224,7 @@ body {
  font-size: clamp(0.7rem, 3vw, 1.5rem);
  font-weight: 400;
  text-align: left;
- color: #5D5D5D;
+ color: #5d5d5d;
 }
 
 #books-section .accordion {
@@ -270,7 +265,6 @@ body {
  text-decoration: none;
 }
 
-/* Change from #chevron-btn to .accordion-chevron */
 .accordion-chevron {
  font-size: clamp(1rem, 2vw, 2rem);
  font-weight: bolder;
@@ -307,8 +301,6 @@ body {
  display: block;
 }
 
-/* ! other section style */
-
 #others-section {
  max-width: 1400px;
  width: 100%;
@@ -320,7 +312,7 @@ body {
  font-size: clamp(0.7rem, 3vw, 1.5rem);
  font-weight: 400;
  text-align: left;
- color: #5D5D5D;
+ color: #5d5d5d;
 }
 
 #others-section .accordion {
@@ -335,7 +327,6 @@ body {
  background: hsla(28.94, 100%, 50%, 35%);
 }
 
-/* Modal styles for story viewing */
 .story-modal {
  display: none;
  position: fixed;
@@ -379,7 +370,6 @@ body {
  padding: 20px 25px;
  background: hsl(185.54, 76.03%, 52.55%);
  color: white;
- /* border-radius: 20px 20px 0 0; */
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -435,7 +425,6 @@ body {
  background: hsl(186, 81%, 35%);
 }
 
-/* Loading states */
 .loading-skeleton {
  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
  background-size: 200% 100%;
@@ -453,7 +442,6 @@ body {
  }
 }
 
-/* Book cover image styling */
 .book-cover {
  width: 60px;
  height: 80px;
@@ -469,14 +457,12 @@ body {
  flex-wrap: wrap;
 }
 
-/* Responsive adjustments for stories slider */
 @media (max-width: 985px) {
  .slider-container .slide {
   flex: 0 0 100%;
  }
 }
 
-/* Story card hover effect */
 .slide {
  cursor: pointer;
  transition: transform 0.3s ease;
@@ -491,7 +477,7 @@ body {
  height: 100%;
  object-fit: cover;
  object-position: center;
- border-top: 5px solid #6C63FF;
+ border-top: 5px solid #6c63ff;
  transition: opacity 0.3s;
 }
 
@@ -499,7 +485,6 @@ body {
  opacity: 0.9;
 }
 
-/* Book items hover effect */
 .accordion-item .accordion-header {
  transition: background 0.3s ease;
 }
@@ -508,7 +493,6 @@ body {
  background: hsla(185.54, 76.03%, 52.55%, 50%);
 }
 
-/* Add this to your hope.css file - ensure accordion content transitions work */
 .accordion-item .accordion-content {
  background-color: hsla(225.56, 76.06%, 72.16%, 25%);
  padding: 1em;
@@ -522,7 +506,6 @@ body {
  display: block;
 }
 
-/* Make sure the chevron is clickable */
 .accordion-chevron {
  font-size: clamp(1rem, 2vw, 2rem);
  font-weight: bolder;
@@ -536,7 +519,6 @@ body {
  transform: rotate(180deg);
 }
 
-/* Ensure the accordion header has proper cursor */
 .accordion-header {
  cursor: pointer;
 }

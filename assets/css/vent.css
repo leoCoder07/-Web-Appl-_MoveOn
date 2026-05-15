@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,8 +8,8 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 }
 
 #header-nav li:nth-of-type(1) a {
- background: linear-gradient(to right, #2ad0e27b, #829CEE7b 25%);
+ background: linear-gradient(to right, #2ad0e27b, #829cee7b 25%);
  border: none;
  border-bottom: 2px solid black;
  color: black;
@@ -48,7 +48,7 @@ body {
 }
 
 .jar .jar-lid {
- background: #BB9457;
+ background: #bb9457;
  width: 100%;
  height: 15%;
  border-radius: 25px;
@@ -105,14 +105,12 @@ body {
  }
 }
 
-
 #app-container .sidebar {
  width: 650px;
  padding: clamp(0.2em, 3vw, 2em);
  display: flex;
  flex-direction: column;
  gap: 15px;
- /* background: lightblue; */
  min-height: 100%;
 }
 
@@ -120,11 +118,11 @@ body {
  line-height: clamp(1.5em, 5vw, 2.5em);
 }
 
-.sidebar header>h1 {
+.sidebar header > h1 {
  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
-.sidebar header>p {
+.sidebar header > p {
  font-size: clamp(1.2rem, 3vw, 2rem);
  font-weight: 300;
 }
@@ -132,7 +130,6 @@ body {
 .sidebar .info-input {
  display: flex;
  flex-direction: column;
- /* background-color: red; */
  flex: 1;
  gap: 15px;
 }
@@ -140,7 +137,7 @@ body {
 .sidebar .card-tutorial {
  background: hsla(350, 75.82%, 64.31%, 20%);
  padding: 1em;
- border-left: 5px solid #E95F76;
+ border-left: 5px solid #e95f76;
 }
 
 .sidebar .card-research {
@@ -163,8 +160,8 @@ body {
 }
 
 .sidebar .input-area {
- background: #E9ECEF;
- border: 1px solid #0C535A;
+ background: #e9ecef;
+ border: 1px solid #0c535a;
  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.5);
  border-radius: 15px;
  padding: 1em;
@@ -194,10 +191,6 @@ body {
  font-size: clamp(0.7rem, 3vw, 1.1rem);
 }
 
-/* .input-area textarea::placeholder {
- font-weight: 300;
-} */
-
 .input-area button {
  flex: 1;
  padding: clamp(0.5em, 3vw, 1em);
@@ -208,8 +201,8 @@ body {
 
  border: none;
 
- background: #8AE6F0;
- color: #0C535A;
+ background: #8ae6f0;
+ color: #0c535a;
  cursor: pointer;
 
  font-size: clamp(0.6rem, 3vw + 5px, 1.5rem);
@@ -245,7 +238,6 @@ body {
  z-index: 2;
 }
 
-/* Scrollbar styling */
 .papers-container::-webkit-scrollbar {
  width: 6px;
 }
@@ -260,10 +252,11 @@ body {
  border-radius: 10px;
 }
 
-/* Paper note styling */
 .paper-note {
  cursor: pointer;
- transition: transform 0.2s ease, filter 0.2s ease;
+ transition:
+  transform 0.2s ease,
+  filter 0.2s ease;
  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
  flex-shrink: 0;
 }
@@ -273,7 +266,6 @@ body {
  filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.3));
 }
 
-/* Modal styling */
 .modal {
  display: none;
  justify-content: center;
@@ -324,7 +316,7 @@ body {
 
 .modal-header {
  padding: 20px 25px;
- background: #BB9457;
+ background: #bb9457;
  color: white;
  display: flex;
  justify-content: space-between;
@@ -394,7 +386,6 @@ body {
  transform: scale(0.98);
 }
 
-/* Empty jar message */
 .empty-jar-message {
  text-align: center;
  color: rgba(38, 7, 1, 0.5);
@@ -403,14 +394,12 @@ body {
  width: 100%;
 }
 
-/* Loading indicator */
 .loading-indicator {
  text-align: center;
  padding: 20px;
  color: #260701;
 }
 
-/* Notification styling */
 .notification {
  position: fixed;
  bottom: 20px;
@@ -420,7 +409,9 @@ body {
  padding: 12px 20px;
  border-radius: 10px;
  z-index: 1001;
- animation: slideInRight 0.3s, fadeOut 0.3s 2.7s;
+ animation:
+  slideInRight 0.3s,
+  fadeOut 0.3s 2.7s;
  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -451,7 +442,6 @@ body {
  background: #dc3545;
 }
 
-/* Burn all button styling */
 .burn-all-container {
  margin-top: 10px;
  text-align: center;

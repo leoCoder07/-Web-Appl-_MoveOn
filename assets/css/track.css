@@ -43,7 +43,6 @@ body {
 }
 
 main {
- /* background: linear-gradient(145deg, #f9f3e8 0%, #fff3e6 100%); */
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -51,14 +50,12 @@ main {
  padding: 2rem 1.5rem;
 }
 
-/* main card container */
 .tracker-container {
  max-width: 1300px;
  width: 100%;
  transition: all 0.2s ease;
 }
 
-/* header with "TRACK!" and visual identity */
 .hero {
  background: #2c2e3a;
  padding: 1.8rem 2rem;
@@ -84,7 +81,6 @@ main {
  font-size: 1rem;
 }
 
-/* calendar navigation */
 .calendar-nav {
  display: flex;
  justify-content: space-between;
@@ -124,7 +120,6 @@ main {
  background: none;
 }
 
-/* weekdays header */
 .calendar-weekdays {
  display: grid;
  grid-template-columns: repeat(7, 1fr);
@@ -137,7 +132,6 @@ main {
  font-size: 0.9rem;
 }
 
-/* calendar grid */
 .calendar-grid {
  display: grid;
  grid-template-columns: repeat(7, 1fr);
@@ -155,7 +149,6 @@ main {
  position: relative;
 }
 
-/* empty cells (prev/next month filler) */
 .calendar-day.empty {
  background: #e9e9fc;
  opacity: 0.6;
@@ -174,7 +167,6 @@ main {
  opacity: 0.5;
 }
 
-/* mood marker inside cell */
 .mood-marker {
  margin-top: 0.4rem;
  font-size: 1rem;
@@ -189,14 +181,10 @@ main {
  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* special today highlight */
 .calendar-day.today {
  background: #1fcde0;
 }
 
-/* ! aside */
-
-/* mood selection panel */
 .mood-panel {
  padding: 2em 0;
  display: flex;
@@ -220,11 +208,9 @@ main {
 
 .mood-panel .sidebar {
  flex: 1;
- /* width: 650px; */
  display: flex;
  flex-direction: column;
  gap: 15px;
- /* background: lightblue; */
  min-height: 100%;
 }
 
@@ -244,7 +230,6 @@ main {
 .sidebar .info-input {
  display: flex;
  flex-direction: column;
- /* background-color: red; */
  flex: 1;
  gap: 15px;
 }
@@ -309,7 +294,6 @@ main {
 }
 
 .mood-btn {
- /* flex: 1 1 0; */
  flex: 1;
  font-family: "Lexend Deca", sans-serif;
  background: none;
@@ -392,7 +376,6 @@ main {
  font-style: italic;
 }
 
-/* research / extra footer */
 .research-note {
  background: #faf0e6;
  padding: 1.2rem 2rem;
@@ -403,7 +386,6 @@ main {
  line-height: 1.4;
 }
 
-/* responsive */
 @media (max-width: 760px) {
  .calendar-day {
   min-height: 10px;

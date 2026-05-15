@@ -26,7 +26,6 @@ function loadQuestion(qId) {
 function updateUI(data) {
  document.getElementById("questionText").textContent = data.question;
  document.title = `Onboarding | Question ${data.question_id}`;
- // document.getElementById('questionNumber').textContent = `Question ${data.question_id} of ${totalQuestions}`;
 
  const optionsContainer = document.getElementById("optionsContainer");
  optionsContainer.innerHTML = "";

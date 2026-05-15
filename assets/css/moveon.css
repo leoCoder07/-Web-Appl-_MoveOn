@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,8 +8,8 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
@@ -17,18 +17,15 @@ body {
  min-height: 100vh;
 }
 
-/* ! nav-styles */
-
-
-
-/* ! hero styles */
 .hero {
-  height: 575px;
-  background-image: linear-gradient(to right, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.1)), url('../images/webp/img1.webp');
-  background-size: cover;
-  background-position: center;
-  transition: background 0.8s ease-in-out;
-  color: white;
+ height: 575px;
+ background-image:
+  linear-gradient(to right, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.1)),
+  url("../images/webp/img1.webp");
+ background-size: cover;
+ background-position: center;
+ transition: background 0.8s ease-in-out;
+ color: white;
 }
 
 #hero .hero-inside {
@@ -41,7 +38,6 @@ body {
  width: 90%;
  margin: 0 auto;
  position: relative;
- /* gap: 25px; */
 }
 
 #hero .hero-content {
@@ -53,40 +49,40 @@ body {
 }
 
 .hero-content h1 {
-  font-size: clamp(1rem, 5vw + 5px, 3rem); /* Fluid typography */
-  margin-bottom: 1rem;
-  font-weight: 400;
+ font-size: clamp(1rem, 5vw + 5px, 3rem);
+ margin-bottom: 1rem;
+ font-weight: 400;
 }
 
 .hero-content p {
- font-size: clamp(0.5rem, 3vw + 5px, 1.50rem);
+ font-size: clamp(0.5rem, 3vw + 5px, 1.5rem);
  font-weight: 300;
  margin-bottom: 1rem;
 }
 
 .hero-nav {
-  position: absolute;
-  bottom: -20%;
-  display: flex;
-  flex-direction: column;
+ position: absolute;
+ bottom: -20%;
+ display: flex;
+ flex-direction: column;
 }
 
 .thumbnails {
-  display: flex;
-  gap: 2%;
-  z-index: 997;
+ display: flex;
+ gap: 2%;
+ z-index: 997;
 }
 
 .thumb {
-  width: 35%;
-  max-width: 200px;
-  min-width: 80px;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  object-fit: cover;
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: 0.3s;
+ width: 35%;
+ max-width: 200px;
+ min-width: 80px;
+ aspect-ratio: 1 / 1;
+ height: auto;
+ object-fit: cover;
+ cursor: pointer;
+ border: 3px solid transparent;
+ transition: 0.3s;
 }
 
 .thumb.active {
@@ -95,25 +91,25 @@ body {
 }
 
 .dots {
-  position: absolute;
-  bottom: 7%;
-  right: 0;
-  display: flex;
-  gap: 10px;
+ position: absolute;
+ bottom: 7%;
+ right: 0;
+ display: flex;
+ gap: 10px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  cursor: pointer;
+ width: 12px;
+ height: 12px;
+ background: rgba(255, 255, 255, 0.5);
+ border-radius: 50%;
+ cursor: pointer;
 }
 
 .dot.active {
-  background: white;
-  transform: scale(1.5);
- }
+ background: white;
+ transform: scale(1.5);
+}
 
 @media (width <= 1025px) {
  #hero .hero-content {
@@ -134,8 +130,6 @@ body {
  }
 }
 
-/* ! main styles */
-
 #why-you-need-moveOn {
  display: flex;
  flex-direction: column;
@@ -143,7 +137,7 @@ body {
  max-width: 1300px;
  margin: 175px auto;
  gap: clamp(50px, 5vw, 125px);
- /* margin-top: 175px; */
+
  padding: 1.5rem;
 }
 
@@ -230,6 +224,3 @@ body {
 #why-you-need-moveOn blockquote .logo-text {
  font-family: "Momo Trust Display", sans-serif;
 }
-
-/* ! footer styles */
-

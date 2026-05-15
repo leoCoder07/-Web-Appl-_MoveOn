@@ -241,14 +241,13 @@
   <div class="faq-header">
    <h1>Frequently Asked Questions</h1>
    <p>Everything you need to know about MoveOn</p>
-   <div class="question-count">📋 15+ Answers to Common Questions</div>
   </div>
 
   <div id="noResults" class="no-results">
    No questions found matching your search. Try different keywords!
   </div>
 
-  <!-- Category 1: General Usage -->
+
   <div class="faq-category" data-category="general">
    <div class="category-header">
     <h2>General Usage</h2>
@@ -287,7 +286,7 @@
    </div>
   </div>
 
-  <!-- Category 2: Features & Functionality -->
+
   <div class="faq-category" data-category="features">
    <div class="category-header">
     <h2>Features & Functionality</h2>
@@ -336,7 +335,7 @@
    </div>
   </div>
 
-  <!-- Category 3: Data Privacy & Security -->
+
   <div class="faq-category" data-category="privacy">
    <div class="category-header">
     <h2>Data Privacy & Security</h2>
@@ -385,7 +384,7 @@
    </div>
   </div>
 
-  <!-- Category 4: Technical & Account Management -->
+
   <div class="faq-category" data-category="technical">
    <div class="category-header">
     <h2>Technical & Account Management</h2>
@@ -444,7 +443,7 @@
    </div>
   </div>
 
-  <!-- Category 5: Troubleshooting -->
+
   <div class="faq-category" data-category="troubleshooting">
    <div class="category-header">
     <h2>Troubleshooting</h2>

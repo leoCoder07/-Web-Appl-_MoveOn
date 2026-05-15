@@ -4,11 +4,11 @@ require_once './includes/db-connect.php';
 
 header('Content-Type: application/json');
 
-// Check if user is logged in or guest
+
 $is_guest = isset($_SESSION['guest_answers']);
 $user_id = $_SESSION['user_id'] ?? null;
 
-// Handle different actions
+
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
 switch ($action) {
@@ -27,10 +27,10 @@ switch ($action) {
   }
 
   if ($is_guest) {
-   // For guest users, we don't save to database
+
    echo json_encode(['success' => true, 'message' => 'Guest mode: mood saved locally']);
   } else if ($user_id) {
-   // Save to database for logged-in users
+
    try {
     $stmt = $pdo->prepare("INSERT INTO user_moods (user_id, mood_date, mood_text) VALUES (?, ?, ?) 
      ON DUPLICATE KEY UPDATE mood_text = VALUES(mood_text)");
@@ -53,7 +53,7 @@ switch ($action) {
   $year = $_GET['year'] ?? date('Y');
   $month = $_GET['month'] ?? date('m');
 
-  // Validate inputs
+
   $year = intval($year);
   $month = intval($month);
 
@@ -66,7 +66,7 @@ switch ($action) {
   $end_date = date('Y-m-t', strtotime($start_date));
 
   if ($is_guest) {
-   // Guest data is handled client-side via localStorage
+
    echo json_encode(['success' => true, 'is_guest' => true, 'moods' => []]);
   } else if ($user_id) {
    try {

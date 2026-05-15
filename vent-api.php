@@ -8,7 +8,7 @@ $is_guest = isset($_SESSION['guest_answers']);
 $user_id = $_SESSION['user_id'] ?? null;
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
-// Helper function to generate random pastel colors
+
 function getRandomPastelColor()
 {
  $hue = rand(0, 360);
@@ -24,7 +24,7 @@ switch ($action) {
 
   $message = trim($_POST['message'] ?? '');
   $color_code = $_POST['color_code'] ?? getRandomPastelColor();
-  $paper_rotation = rand(-15, 15); // Random rotation for each paper
+  $paper_rotation = rand(-15, 15);
 
   if (empty($message)) {
    echo json_encode(['success' => false, 'error' => 'Message cannot be empty']);
@@ -37,7 +37,7 @@ switch ($action) {
   }
 
   if ($is_guest) {
-   // Guest: return data to be stored in localStorage
+
    $paper_id = 'guest_' . time() . '_' . rand(1000, 9999);
    echo json_encode([
     'success' => true,

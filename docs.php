@@ -265,15 +265,16 @@
 </head>
 
 <body>
+
  <div class="documentation-container">
-  <!-- Header -->
+
   <div class="doc-header">
    <h1>MoveOn</h1>
    <p>Emotional Recovery Platform - Technical Documentation</p>
    <div class="version">Version 1.0 | Last Updated: May 2026</div>
   </div>
 
-  <!-- Table of Contents -->
+
   <div class="toc">
    <h2>Table of Contents</h2>
    <div class="toc-grid">
@@ -286,13 +287,13 @@
    </div>
   </div>
 
-  <!-- Section 1: Project Overview -->
+
   <div id="overview" class="section">
    <h2>1. Project Overview</h2>
    <p><strong>MoveOn</strong> is a targeted web-based mental health and emotional recovery application designed to help individuals navigate the difficult aftermath of a breakup. Understanding that heartbreak is a non-linear process, MoveOn provides a structured, safe, and interactive digital space for users to process their emotions, track their healing progress, and find solace through music and community stories. By combining cognitive behavioral tracking with expressive writing and sensory therapy, MoveOn acts as a digital companion for the newly single.</p>
   </div>
 
-  <!-- Section 2: Project Goals -->
+
   <div id="goals" class="section">
    <h2>2. Project Goals</h2>
    <ul style="margin-left: 20px; color: #555;">
@@ -304,7 +305,7 @@
    </ul>
   </div>
 
-  <!-- Section 3: Core Features -->
+
   <div id="features" class="section">
    <h2>3. Core Features</h2>
    <div class="features-grid">
@@ -339,7 +340,7 @@
    </div>
   </div>
 
-  <!-- Section 4: Technical Implementation -->
+
   <div id="technical" class="section">
    <h2>4. Technical Implementation</h2>
    <p>I developed MoveOn using a traditional but highly effective basic style architecture (JS, Apache, MySQL, PHP), enhanced with modern frontend practices.</p>
@@ -372,7 +373,7 @@
    <p>Implemented a robust session validation layer via <code>process-post-authentication.php</code>. Every protected page includes this file, which checks for <code>$_SESSION['user_id']</code> (for registered users) or <code>$_SESSION['guest_answers']</code> (for guests), redirecting unauthorized access appropriately.</p>
   </div>
 
-  <!-- Section 5: Best Practices -->
+
   <div id="practices" class="section">
    <h2>5. Best Practices Applied</h2>
    <ul class="practices-list">
@@ -384,40 +385,40 @@
    </ul>
   </div>
 
-  <!-- Section 6: System Design Diagrams -->
+
   <div id="diagrams" class="section">
    <h2>6. System Design Diagrams</h2>
    <p>To ensure a robust architecture and clear understanding of system behaviors, I utilized the following UML and system diagrams during the design phase:</p>
 
-   <!-- Diagram 1 -->
+
    <h3>1. Sequence Diagram</h3>
    <div class="diagram-placeholder">
     <img src="assets/images/diagrams/moveon_sequence.png" alt="">
    </div>
    <p><strong>Key Insight:</strong> It mapped out the exact lifecycle of a user session—from the initial onboarding loop, through the complex authentication decision tree (Sign Up/Log In/Guest), to the asynchronous API calls for saving moods and vent thoughts.</p>
 
-   <!-- Diagram 2 -->
+
    <h3>2. Use Case Diagram</h3>
    <div class="diagram-placeholder">
     <img src="assets/images/diagrams/moveon_ucd.png" alt="">
    </div>
    <p><strong>Key Insight:</strong> Clearly defined the boundaries between "Visitors," "Guests," and "Registered Users," highlighting how Guests interact with the same UI features but route their data to LocalStorage instead of the Database.</p>
 
-   <!-- Diagram 3 -->
+
    <h3>3. Activity Diagram</h3>
    <div class="diagram-placeholder">
     <img src="assets/images/diagrams/moveon_activity.png" alt="">
    </div>
    <p><strong>Key Insight:</strong> Illustrated the parallel processing during onboarding (fetching questions while initializing sessions) and the conditional branching within the core features (e.g., choosing between updating a profile or logging out).</p>
 
-   <!-- Diagram 4 -->
+
    <h3>4. Deployment Diagram</h3>
    <div class="diagram-placeholder">
     <img src="assets/images/diagrams/moveon_deployment.png" alt="">
    </div>
    <p><strong>Key Insight:</strong> Visualized the Three-Tier Architecture (Client Browser, PHP Web Server, MySQL Database), clarifying where different storage mechanisms (<code>$_SESSION</code>, <code>localStorage</code>, MySQL tables) reside and how data traverses via HTTP/SQL protocols.</p>
 
-   <!-- Diagram 5 -->
+
    <h3>5. Flowchart Diagram</h3>
    <div class="diagram-placeholder">
     <img src="assets/images/diagrams/moveon_flowchart.png" alt="">
@@ -435,9 +436,11 @@
    </div>
   </div>
 
-  <!-- Footer -->
+
  </div>
+ <script src="assets/js/header.js"></script>
  <?php include './includes/footer.php' ?>
+
 
 </body>
 

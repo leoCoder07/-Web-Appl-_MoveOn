@@ -21,11 +21,11 @@ require_once 'process-post-authentication.php';
 
 <body>
 
- <!-- header & navigation -->
+
  <?php include './includes/header.php'; ?>
 
  <main>
-  <!-- Hero Section -->
+
   <section class="hero" id="hero">
    <div class="hero-inside">
     <div class="hero-content">
@@ -51,7 +51,7 @@ require_once 'process-post-authentication.php';
    </div>
   </section>
 
-  <!-- Why you need MoveOn Section -->
+
   <section id="why-you-need-moveOn">
    <div class="header">
     <h1>Why you need <span class="logo">MoveOn</span>?</h1>
@@ -103,7 +103,7 @@ require_once 'process-post-authentication.php';
   </section>
  </main>
 
- <!-- footer -->
+
  <?php include './includes/footer.php'; ?>
 
  <script src="assets/js/header.js"></script>

@@ -16,8 +16,10 @@ menuButton.addEventListener('click', () => {
  }
 });
 
-logoHref = document.querySelector('.logo-href');
+logoHref = document.querySelectorAll('.logo-href');
 
-logoHref.addEventListener('click', () => {
- location.href = 'moveon.php';
+logoHref.forEach(button => {
+ button.addEventListener('click', () => {
+  location.href = "moveon.php";
+ })
 });

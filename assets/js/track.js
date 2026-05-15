@@ -1,12 +1,9 @@
-// track.js - Mood Calendar Tracker with MySQL & localStorage support
-
 let moodData = {};
 let currentDisplayYear = null;
 let currentDisplayMonth = null;
 let selectedMood = null;
 let isGuest = false;
 
-// DOM Elements
 const calendarGridEl = document.getElementById("calendarGrid");
 const monthYearDisplay = document.getElementById("monthYearDisplay");
 const prevBtn = document.getElementById("prevMonthBtn");
@@ -16,7 +13,6 @@ const burnBtn = document.getElementById("burnSelectedBtn");
 const moodButtonsContainer = document.getElementById("moodButtonsContainer");
 const infoMessageEl = document.getElementById("infoMessage");
 
-// Helper Functions
 function getTodayKey() {
  const today = new Date();
  const yyyy = today.getFullYear();
@@ -40,7 +36,6 @@ function showTemporaryMessage(msg, isError = false) {
  }, 3000);
 }
 
-// API Calls
 async function saveMoodToServer(date, mood) {
  const formData = new FormData();
  formData.append("action", "save_mood");
@@ -88,13 +83,13 @@ async function loadMoodsFromServer(year, month) {
   if (result.success) {
    if (result.is_guest) {
     isGuest = true;
-    // Load from localStorage for guests
+
     loadFromLocalStorage();
    } else {
     isGuest = false;
-    // Merge server data with any local data
+
     moodData = result.moods;
-    saveToLocalStorage(); // Backup to localStorage
+    saveToLocalStorage();
    }
    renderCalendar();
   } else {
@@ -106,13 +101,12 @@ async function loadMoodsFromServer(year, month) {
  } catch (error) {
   console.error("Error loading moods:", error);
   showTemporaryMessage("Network error loading moods", true);
-  // Fallback to localStorage
+
   loadFromLocalStorage();
   renderCalendar();
  }
 }
 
-// LocalStorage Functions (for guests and backup)
 function loadFromLocalStorage() {
  const stored = localStorage.getItem("mood_calendar_guest_data");
  if (stored) {
@@ -132,7 +126,6 @@ function saveToLocalStorage() {
  }
 }
 
-// Mood Management
 async function setMoodForDate(dateObj, moodText) {
  if (!moodText) return false;
 
@@ -144,7 +137,6 @@ async function setMoodForDate(dateObj, moodText) {
  moodData[key] = moodText;
  saveToLocalStorage();
 
- // Save to server if not guest
  const result = await saveMoodToServer(key, moodText);
  if (result.success) {
   showTemporaryMessage(`✅ ${moodText} mood saved!`);
@@ -187,7 +179,6 @@ function getMoodForDate(dateObj) {
  return moodData[key] || null;
 }
 
-// Calendar Rendering
 function renderCalendar() {
  if (!currentDisplayYear || currentDisplayMonth === undefined) return;
 
@@ -209,7 +200,6 @@ function renderCalendar() {
 
  let cells = [];
 
- // Previous month days
  for (let i = startWeekday - 1; i >= 0; i--) {
   const prevDateNum = daysInPrevMonth - i;
   const fillerDate = new Date(
@@ -231,7 +221,6 @@ function renderCalendar() {
   });
  }
 
- // Current month days
  for (let d = 1; d <= daysInMonth; d++) {
   const currentDate = new Date(currentDisplayYear, currentDisplayMonth, d);
   const moodHere = getMoodForDate(currentDate);
@@ -248,7 +237,6 @@ function renderCalendar() {
   });
  }
 
- // Next month filler
  const totalCells = cells.length;
  const remaining = 42 - totalCells;
  for (let i = 1; i <= remaining; i++) {
@@ -267,7 +255,6 @@ function renderCalendar() {
   });
  }
 
- // Render grid
  calendarGridEl.innerHTML = "";
  cells.forEach((cell) => {
   const dayDiv = document.createElement("div");
@@ -344,7 +331,6 @@ function goNextMonth() {
  loadMoodsFromServer(currentDisplayYear, currentDisplayMonth + 1);
 }
 
-// Mood Selection UI
 function highlightSelectedMoodButton(moodValue) {
  const allBtns = document.querySelectorAll(".mood-btn");
  allBtns.forEach((btn) => {
@@ -368,11 +354,9 @@ async function pinMoodToToday() {
  const day = String(todayDate.getDate()).padStart(2, "0");
  const key = `${year}-${month}-${day}`;
 
- // Update local data immediately
  moodData[key] = selectedMood;
  saveToLocalStorage();
 
- // Save to server (don't wait for it to complete or let it affect rendering)
  saveMoodToServer(key, selectedMood).then((result) => {
   if (result.success) {
    showTemporaryMessage(`✅ ${selectedMood} mood saved!`);
@@ -381,7 +365,6 @@ async function pinMoodToToday() {
   }
  });
 
- // Force immediate re-render without waiting for server
  renderCalendar();
 }
 
@@ -398,11 +381,9 @@ async function burnMoodFromToday() {
   return;
  }
 
- // Remove from local data immediately
  delete moodData[key];
  saveToLocalStorage();
 
- // Remove from server (don't wait)
  removeMoodFromServer(key).then((result) => {
   if (result.success) {
    showTemporaryMessage(`🔥 Mood removed!`);
@@ -411,7 +392,6 @@ async function burnMoodFromToday() {
   }
  });
 
- // Force immediate re-render
  renderCalendar();
 }
 
@@ -443,5 +423,4 @@ async function init() {
  setupMoodSelection();
 }
 
-// Start the app
 init();

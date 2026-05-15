@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -9,8 +9,8 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
@@ -33,8 +33,7 @@ body {
  height: auto;
  padding: 0 1em;
  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- 
- 
+
  cursor: default;
 }
 
@@ -53,13 +52,16 @@ body {
  }
 }
 
-
 .logo {
  font-family: "Momo Trust Display", sans-serif;
  font-size: clamp(1rem, 5vw + 10px, 2rem);
  text-align: center;
 
- background: linear-gradient(var(--gradient-angle), var(--logo-color-left), var(--logo-color-right) 50%);
+ background: linear-gradient(
+  var(--gradient-angle),
+  var(--logo-color-left),
+  var(--logo-color-right) 50%
+ );
  animation: rotate-gradient 0.5s infinite;
 
  -webkit-background-clip: text;
@@ -106,7 +108,7 @@ main {
 #sub-container {
  display: flex;
  flex-direction: column;
- gap: 20px
+ gap: 20px;
 }
 
 #sub-container .header-q {
@@ -197,10 +199,8 @@ main {
 
 #optionsContainer label:has(input[type="radio"]:active) {
  transform: scale(0.975);
-} 
+}
 
-
-/* ! color emotions for 2nd question */
 #optionsContainer label.colorize:nth-child(1) {
  background-color: hsla(4.62, 51.59%, 49.41%, var(--percentage));
 }
@@ -235,7 +235,7 @@ main {
  font-family: "Lexend Deca", sans-serif;
  font-weight: 300;
  background-color: transparent;
- padding: 0.80em 0.90em;
+ padding: 0.8em 0.9em;
  cursor: pointer;
  outline: none;
  border: none;

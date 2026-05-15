@@ -1,8 +1,6 @@
 <?php
 require_once 'process-authentication.php';
 require_once 'process-post-authentication.php';
-
-// If guest, redirect or show limited view
 $is_guest = isset($_SESSION['guest_answers']);
 ?>
 
@@ -26,7 +24,6 @@ $is_guest = isset($_SESSION['guest_answers']);
  <main>
   <div class="profile-container">
    <?php if ($is_guest): ?>
-    <!-- Guest View -->
     <div class="guest-profile">
      <div class="profile-icon-wrapper">
       <div class="profile-icon gradient-default">
@@ -45,12 +42,10 @@ $is_guest = isset($_SESSION['guest_answers']);
      </div>
     </div>
    <?php else: ?>
-    <!-- Logged-in User View -->
     <div class="user-profile" id="userProfile">
      <div class="profile-header">
       <div class="profile-icon-wrapper">
        <div class="profile-icon" id="profileIcon">
-        <!-- Dynamic gradient will be applied via JS -->
        </div>
        <button class="edit-icon-btn" id="editIconBtn" title="Change profile icon">
         <i class="ti ti-edit"></i>
@@ -75,7 +70,6 @@ $is_guest = isset($_SESSION['guest_answers']);
       </div>
      </div>
 
-     <!-- Onboarding Answers Section -->
      <div class="answers-section">
       <h3>Your Onboarding Journey</h3>
       <div id="answersContainer" class="answers-container">
@@ -83,7 +77,6 @@ $is_guest = isset($_SESSION['guest_answers']);
       </div>
      </div>
 
-     <!-- Settings Section -->
      <div class="settings-section">
       <form method="POST" action="process-post-authentication.php" class="logout-form">
        <button type="submit" name="logout" class="logout-btn">
@@ -96,7 +89,6 @@ $is_guest = isset($_SESSION['guest_answers']);
   </div>
  </main>
 
- <!-- Modal for Profile Icon Selection -->
  <div id="iconModal" class="modal">
   <div class="modal-content modal-medium">
    <div class="modal-header">
@@ -105,13 +97,11 @@ $is_guest = isset($_SESSION['guest_answers']);
    </div>
    <div class="modal-body">
     <div class="icon-grid" id="iconGrid">
-     <!-- Icons will be dynamically generated -->
     </div>
    </div>
   </div>
  </div>
 
- <!-- Modal for Username Change -->
  <div id="usernameModal" class="modal">
   <div class="modal-content">
    <div class="modal-header">
@@ -138,7 +128,6 @@ $is_guest = isset($_SESSION['guest_answers']);
   </div>
  </div>
 
- <!-- Modal for Bio Edit -->
  <div id="bioModal" class="modal">
   <div class="modal-content">
    <div class="modal-header">

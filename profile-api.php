@@ -43,7 +43,7 @@ switch ($action) {
   }
 
   try {
-   // Check if username exists
+
    $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? AND id != ?");
    $stmt->execute([$new_username, $user_id]);
    if ($stmt->fetch()) {
@@ -51,7 +51,7 @@ switch ($action) {
     exit;
    }
 
-   // Check username change limits (max 3 per month)
+
    $stmt = $pdo->prepare("SELECT username_change_count, last_username_change FROM users WHERE id = ?");
    $stmt->execute([$user_id]);
    $user = $stmt->fetch();
@@ -59,7 +59,7 @@ switch ($action) {
    $today = new DateTime();
    $lastChange = $user['last_username_change'] ? new DateTime($user['last_username_change']) : null;
 
-   // Reset count if it's a new month
+
    if (!$lastChange || $lastChange->format('Y-m') !== $today->format('Y-m')) {
     $changeCount = 0;
    } else {
@@ -71,16 +71,16 @@ switch ($action) {
     exit;
    }
 
-   // Get old username before update
+
    $stmt = $pdo->prepare("SELECT username FROM users WHERE id = ?");
    $stmt->execute([$user_id]);
    $old_username = $stmt->fetchColumn();
 
-   // Update username
+
    $stmt = $pdo->prepare("UPDATE users SET username = ?, username_change_count = ?, last_username_change = CURDATE() WHERE id = ?");
    $stmt->execute([$new_username, $changeCount + 1, $user_id]);
 
-   // Log the change
+
    $stmt = $pdo->prepare("INSERT INTO username_change_history (user_id, old_username, new_username) VALUES (?, ?, ?)");
    $stmt->execute([$user_id, $old_username, $new_username]);
 
@@ -156,12 +156,12 @@ switch ($action) {
 
  case 'get_questions_with_answers':
   try {
-   // Get all onboarding questions
+
    $stmt = $pdo->prepare("SELECT id, question_text FROM onboarding_questions ORDER BY id");
    $stmt->execute();
    $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-   // Get user's answers
+
    $stmt = $pdo->prepare("SELECT question_1, question_2, question_3, question_4 FROM users WHERE id = ?");
    $stmt->execute([$user_id]);
    $userAnswers = $stmt->fetch(PDO::FETCH_ASSOC);

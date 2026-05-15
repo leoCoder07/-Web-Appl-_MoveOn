@@ -1,7 +1,7 @@
 <footer>
  <div id="footer-container">
   <div id="logo-container">
-   <div class="logo-box">
+   <div class="logo-box logo-href">
     <h1 class="logo">MoveOn</h1>
    </div>
   </div>
@@ -15,12 +15,13 @@
      <li><a href="faqs.php">FAQ's</a></li>
      <li><a href="contact.php">Contact</a></li>
      <li><a href="about.php">About</a></li>
-     <!-- <li><a href="">Books</a></li> -->
+
     </ul>
    </div>
    <div class="navigate">
     <h3>NAVIGATE</h3>
     <ul class="ftr-nav-btns">
+     <li><a href="moveon.php">Home</a></li>
      <li><a href="vent.php">Vent</a></li>
      <li><a href="relapse.php">Relapse</a></li>
      <li><a href="hope.php">Hope</a></li>

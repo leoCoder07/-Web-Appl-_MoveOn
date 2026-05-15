@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,8 +8,8 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
@@ -17,15 +17,13 @@ body {
  min-height: 100vh;
 }
 
-/* ========== HEADER NAVIGATION ========== */
 #header-nav li:nth-of-type(2) a {
- background: linear-gradient(to right, #2ad0e27b, #829CEE7b 25%);
+ background: linear-gradient(to right, #2ad0e27b, #829cee7b 25%);
  border: none;
  border-bottom: 2px solid black;
  color: black;
 }
 
-/* ========== MAIN CONTAINER ========== */
 #app-container {
  width: min(90%, 1400px);
  display: flex;
@@ -34,7 +32,6 @@ body {
  margin: 0 auto;
 }
 
-/* ========== MUSIC SECTION ========== */
 #app-container .music-section {
  width: 650px;
  min-height: 750px;
@@ -46,7 +43,7 @@ body {
 #app-container .music-container {
  width: 100%;
  height: 100%;
- border: 2px solid #625FE9;
+ border: 2px solid #625fe9;
  border-radius: 15px;
  display: flex;
  flex-direction: column;
@@ -54,7 +51,6 @@ body {
  gap: 1em;
 }
 
-/* Playlist Tabs Container */
 #playlistTabs {
  display: flex;
  flex-direction: column;
@@ -68,7 +64,6 @@ body {
  display: none;
 }
 
-/* Playlist Tab Styles */
 .music-container .playlist-tab {
  flex: 1;
  border-radius: 13px;
@@ -121,18 +116,16 @@ body {
  transform: rotate(360deg);
 }
 
-/* Playlist Colors */
 .music-container .submerged-playlist {
- background: linear-gradient(to bottom, #780000, #DE0000);
- color: #FFCCCC;
+ background: linear-gradient(to bottom, #780000, #de0000);
+ color: #ffcccc;
 }
 
 .music-container .ascendant-playlist {
- background: linear-gradient(to bottom, #023047, #0575AD);
- color: #9CDCFC;
+ background: linear-gradient(to bottom, #023047, #0575ad);
+ color: #9cdcfc;
 }
 
-/* ========== PLAYLIST DISPLAY (Dynamic View) ========== */
 .playlist-display {
  width: 100%;
  height: 100%;
@@ -157,7 +150,11 @@ body {
 }
 
 .playlist-header {
- background: linear-gradient(135deg, var(--logo-color-left), var(--logo-color-right) 25%);
+ background: linear-gradient(
+  135deg,
+  var(--logo-color-left),
+  var(--logo-color-right) 25%
+ );
  color: white;
  padding: 15px 20px;
  display: flex;
@@ -190,7 +187,6 @@ body {
  transform: translateX(-3px);
 }
 
-/* Songs List */
 .songs-list {
  flex: 1;
  overflow-y: auto;
@@ -251,7 +247,6 @@ body {
  font-size: 1.2rem;
 }
 
-/* Songs List Scrollbar */
 .songs-list::-webkit-scrollbar {
  width: 6px;
 }
@@ -270,7 +265,6 @@ body {
  background: rgba(255, 255, 255, 0.5);
 }
 
-/* ========== SIDEBAR ========== */
 #app-container .sidebar {
  width: 650px;
  padding: clamp(0.2em, 3vw, 2em);
@@ -284,11 +278,11 @@ body {
  line-height: clamp(1.5em, 5vw, 2.5em);
 }
 
-.sidebar header>h1 {
+.sidebar header > h1 {
  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
-.sidebar header>p {
+.sidebar header > p {
  font-size: clamp(1.2rem, 3vw, 2rem);
  font-weight: 300;
 }
@@ -300,11 +294,10 @@ body {
  gap: 15px;
 }
 
-/* Tutorial & Research Cards */
 .sidebar .card-tutorial {
  background: hsla(350, 75.82%, 64.31%, 20%);
  padding: 1em;
- border-left: 5px solid #E95F76;
+ border-left: 5px solid #e95f76;
 }
 
 .sidebar .card-research {
@@ -326,7 +319,6 @@ body {
  font-weight: 300;
 }
 
-/* Music Image Display */
 .sidebar .music-image {
  flex: 1;
  min-height: 100px;
@@ -366,10 +358,9 @@ body {
  opacity: 0.7;
 }
 
-/* Music Player */
 .sidebar .music-player {
- background: #E9ECEF;
- border: 1px solid #0C535A;
+ background: #e9ecef;
+ border: 1px solid #0c535a;
  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.5);
  border-radius: 15px;
  padding: 1em;
@@ -426,10 +417,9 @@ body {
  border: none;
  outline: none;
  border-radius: 11px;
- background-color: #8AE6F0;
+ background-color: #8ae6f0;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
 @media (width <=1444px) {
  #app-container .sidebar {
   width: 100%;

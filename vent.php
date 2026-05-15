@@ -16,7 +16,6 @@ require_once 'process-post-authentication.php';
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
  <title>Vent - Release Your Thoughts</title>
  <script>
-  // Pass user session info to JavaScript
   window.userSession = {
    isGuest: <?php echo isset($_SESSION['guest_answers']) ? 'true' : 'false'; ?>,
    userId: <?php echo $_SESSION['user_id'] ?? 'null'; ?>
@@ -36,7 +35,6 @@ require_once 'process-post-authentication.php';
      <div class="jar-body">
       <img id="jar-reflection" src="assets/images/svg/jar-reflection.svg" alt="">
       <div id="papersContainer" class="papers-container">
-       <!-- Rolled papers will be dynamically inserted here -->
        <div class="loading-indicator">Loading your thoughts...</div>
       </div>
      </div>
@@ -71,16 +69,12 @@ require_once 'process-post-authentication.php';
        <textarea id="ventMessage" name="vent-message" placeholder="Write your unsaid thoughts/feelings here..." spellcheck="false" maxlength="500"></textarea>
        <button type="submit" id="putButton"><i class="ti ti-circle-dashed-plus"></i><span>Put</span></button>
       </form>
-      <!-- <div class="burn-all-container">
-       <button id="burnAllBtn" class="burn-all-btn"><i class="ti ti-trash"></i> Burn All Messages</button>
-      </div> -->
      </div>
     </section>
    </aside>
   </section>
  </main>
 
- <!-- Modal for viewing message -->
  <div id="messageModal" class="modal">
   <div class="modal-content">
    <div class="modal-header">

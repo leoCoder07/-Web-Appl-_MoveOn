@@ -16,7 +16,7 @@ require_once 'process-post-authentication.php';
  <link rel="stylesheet" href="assets/css/track.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
- <title>Track</title>
+ <title>Track - Healing Progress</title>
 </head>
 
 <body>
@@ -28,10 +28,9 @@ require_once 'process-post-authentication.php';
   <div class="tracker-container" id="app">
    <header>
     <h1>Track!</h1>
-    <p>Visualize progress</p>
+    <p>Healing progress</p>
    </header>
 
-   <!-- dynamic calendar header & navigation -->
    <div class="calendar-nav">
     <div class="calendar-head">
      <div class="month-year" id="monthYearDisplay">May 2025</div>
@@ -48,7 +47,6 @@ require_once 'process-post-authentication.php';
 
    <div id="calendarGrid" class="calendar-grid"></div>
 
-   <!-- mood selection area (exactly like concept) -->
    <div class="mood-panel">
     <aside class="sidebar">
 
@@ -85,11 +83,6 @@ require_once 'process-post-authentication.php';
      <button id="burnSelectedBtn" class="primary-btn danger-btn"><i class="ti ti-pinned-off"></i></button>
      <button id="pinTodayBtn" class="primary-btn"><i class="ti ti-pin"></i></button>
     </div>
-    <!-- <div class="info-message">
-     💡 Click a mood, then press "Put mood on TODAY" → pins your feeling to current real day.<br>
-     🔥 "Burn" removes mood from today's cell.<br>
-     📅 Navigate months with Prev/Next, see your whole mood history.
-    </div> -->
    </div>
   </div>
 

@@ -10,7 +10,6 @@
  <?php
 
  require_once 'process-authentication.php';
- // require_once 'process-post-authentication.php';
 
  if (isset($_SESSION['four_digit_code']) || isset($_SESSION['guest_answers'])) {
   header('Location: moveon.php');
@@ -19,7 +18,7 @@
 
  ?>
 
- <title><?= $show_login ? 'Log in' : 'Sign up' ?></title>
+ <title><?= $show_login ? 'Log In' : 'Sign Up' ?></title>
 </head>
 
 <body>
@@ -30,7 +29,6 @@
 
  <main id="auth-container">
 
-  <!-- sign up form -->
   <div id="sign-up-form" class="auth-form <?= $show_login ? '' : 'active' ?>">
    <div class="header">
     <h2>Sign Up</h2>
@@ -75,7 +73,6 @@
    </form>
   </div>
 
-  <!-- login form -->
   <div id="log-in-form" class="auth-form <?= $show_login ? 'active' : '' ?>">
    <div class="header">
     <h2>Log In</h2>
@@ -113,7 +110,6 @@
    </form>
   </div>
 
-  <!-- forgot password form -->
   <div id="forgot-pass-form" class="auth-form">
    <div class="header">
     <h2>Recover account</h2>
@@ -132,8 +128,6 @@
        <input class="recover-input" type="text" name="identifier" id="username" minlength="3" maxlength="255" placeholder="username or 4 digit code" />
       </div>
      </div>
-
-     <!-- <p class="consent">By logging in, you consent to MoveOn's Terms of Use and Privacy Policy.</p> -->
 
      <div class="quess-or-login">
       <button type="button" class="toggle-login-btn">Log in</button>

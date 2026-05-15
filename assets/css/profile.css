@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,15 +8,14 @@
 
 :root {
  --percentage: 25%;
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 }
 
 body {
  font-family: "Lexend Deca", sans-serif;
  min-height: 100vh;
 }
-
 
 .profile-container {
  max-width: 1200px;
@@ -26,7 +25,6 @@ body {
  border-radius: 2rem;
 }
 
-/* Profile Header */
 .profile-header {
  display: flex;
  flex-wrap: wrap;
@@ -55,7 +53,6 @@ body {
  transition: transform 0.2s;
 }
 
-/* Gradient variants */
 .profile-icon.gradient-1,
 .gradient-1 {
  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -93,7 +90,11 @@ body {
 
 .profile-icon.gradient-default,
 .gradient-default {
- background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ background: linear-gradient(
+  135deg,
+  var(--logo-color-left) 0%,
+  var(--logo-color-right) 100%
+ );
 }
 
 .edit-icon-btn {
@@ -182,7 +183,6 @@ body {
  color: #667eea;
 }
 
-/* Answers Section */
 .answers-section {
  padding: 1.4em 0;
 }
@@ -199,12 +199,6 @@ body {
  align-items: center;
  gap: 0.5rem;
 }
-
-/* .answers-container {
- background: hsla(225.56, 76.06%, 72.16%, 25%);
- border-radius: 10px;
- padding: 1.5rem;
-} */
 
 .answer-item {
  padding: 1rem;
@@ -231,7 +225,6 @@ body {
  font-style: normal;
 }
 
-/* Settings Section */
 .settings-section .logout-form {
  border-top: 1px solid black;
  padding: 1rem 0;
@@ -257,7 +250,6 @@ body {
  transform: scale(0.98);
 }
 
-/* Guest Profile */
 .guest-profile {
  text-align: center;
  padding: 2rem;
@@ -306,7 +298,6 @@ body {
  text-decoration: underline;
 }
 
-/* Modal Styles */
 .modal {
  display: none;
  position: fixed;
@@ -397,7 +388,6 @@ body {
  gap: 1rem;
 }
 
-/* Form Styles */
 .form-group {
  margin-bottom: 1.5rem;
 }
@@ -444,7 +434,6 @@ body {
  margin-top: 0.5rem;
 }
 
-/* Icon Grid */
 .icon-grid {
  display: grid;
  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -485,7 +474,6 @@ body {
  color: #666;
 }
 
-/* Buttons */
 .btn-primary,
 .btn-secondary {
  padding: 10px 20px;
@@ -520,7 +508,6 @@ body {
  padding: 2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
  .profile-container {
   padding: 1rem;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Rammetto+One&display=swap");
 
 * {
  box-sizing: border-box;
@@ -8,9 +8,8 @@
 }
 
 :root {
- /* colors for logo */
- --logo-color-right: #829CEE;
- --logo-color-left: #2AD1E2;
+ --logo-color-right: #829cee;
+ --logo-color-left: #2ad1e2;
 
  --secondary-color: #829cee;
 }
@@ -102,7 +101,11 @@ main {
  font-size: clamp(1rem, 10vw + 10px, 8rem);
  text-align: center;
 
- background: linear-gradient(var(--gradient-angle), var(--logo-color-left), var(--logo-color-right) 50%);
+ background: linear-gradient(
+  var(--gradient-angle),
+  var(--logo-color-left),
+  var(--logo-color-right) 50%
+ );
 
  animation: rotate-gradient 0.5s ease-in-out infinite;
 
@@ -127,7 +130,7 @@ main {
  max-width: 70%;
  text-align: right;
  align-self: flex-end;
- line-height: 1.50em;
+ line-height: 1.5em;
  opacity: 0;
  animation: slideFromRight 0.5s ease-out forwards;
  animation-delay: 1.5s;
@@ -166,7 +169,7 @@ main {
 } */
 
 #container button:active {
- transform: scale(0.950) !important;
+ transform: scale(0.95) !important;
  background-color: hsla(225.56, 76.06%, 72.16%, 45%);
 }
 

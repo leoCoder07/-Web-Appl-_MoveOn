@@ -8,9 +8,9 @@ $action = $_GET['action'] ?? $_POST['action'] ?? '';
 
 switch ($action) {
  case 'get_quote':
-  // Get today's quote (or random if no daily quote system)
+
   try {
-   // Get a random quote that's active
+
    $stmt = $pdo->prepare("SELECT quote_text, author FROM quotes WHERE is_active = TRUE ORDER BY RAND() LIMIT 1");
    $stmt->execute();
    $quote = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -18,7 +18,7 @@ switch ($action) {
    if ($quote) {
     echo json_encode(['success' => true, 'quote' => $quote]);
    } else {
-    // Fallback quote
+
     echo json_encode(['success' => true, 'quote' => [
      'quote_text' => 'Hope is the thing with feathers that perches in the soul.',
      'author' => 'Emily Dickinson'

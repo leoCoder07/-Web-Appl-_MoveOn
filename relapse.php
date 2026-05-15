@@ -14,7 +14,7 @@ require_once 'process-post-authentication.php';
  <link rel="stylesheet" href="assets/css/relapse.css">
  <link rel="stylesheet" href="assets/css/header&footer/footer.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
- <title>Relapse - Music for Your Journey</title>
+ <title>Relapse - Music for Healing</title>
  <script>
   window.userSession = {
    isGuest: <?php echo isset($_SESSION['guest_answers']) ? 'true' : 'false'; ?>,
@@ -32,7 +32,6 @@ require_once 'process-post-authentication.php';
 
    <div class="music-section">
     <div class="music-container" id="musicContainer">
-     <!-- Playlist Tabs (initial view) -->
      <div id="playlistTabs">
       <div class="submerged-playlist playlist-tab" data-playlist="submerged">
        <h1 class="title">SUBMERGED</h1>
@@ -46,17 +45,15 @@ require_once 'process-post-authentication.php';
       </div>
      </div>
 
-     <!-- Playlist Display (hidden initially, shows when playlist is selected) -->
      <div id="playlistDisplay" class="playlist-display" style="display: none;">
       <div class="playlist-header">
        <button id="backToPlaylistsBtn" class="back-btn">
         <i class="ti ti-arrow-left"></i> Back
        </button>
        <h3 id="currentPlaylistTitle">SUBMERGED</h3>
-       <div style="width: 40px;"></div> <!-- Spacer for alignment -->
+       <div style="width: 40px;"></div>
       </div>
       <div id="songsList" class="songs-list">
-       <!-- Songs will be dynamically populated here -->
       </div>
      </div>
     </div>
@@ -65,7 +62,7 @@ require_once 'process-post-authentication.php';
    <aside class="sidebar">
     <header>
      <h1>RELAPSE!</h1>
-     <p>Listen to music</p>
+     <p>Music for healing</p>
     </header>
 
     <section class="info-input">
@@ -124,7 +121,6 @@ require_once 'process-post-authentication.php';
   </section>
  </main>
 
- <!-- Audio element (hidden) -->
  <audio id="audioPlayer" preload="metadata"></audio>
 
  <?php include './includes/footer.php' ?>
